@@ -2,12 +2,12 @@
 <html class="no-js" lang="zxx">
 
 
-<!-- Mirrored from codeskdhaka.com/html/kindedo-prev/kindedo/about.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 04 May 2023 08:04:16 GMT -->
+<!-- Mirrored from codeskdhaka.com/html/kindedo-prev/kindedo/index-3.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 04 May 2023 08:03:22 GMT -->
 
 <head>
    <meta charset="utf-8">
    <meta http-equiv="x-ua-compatible" content="ie=edge">
-   <title>Kindedo - About</title>
+   <title>Kindedo - Home 3</title>
    <meta name="description" content="">
    <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -26,7 +26,6 @@
    <link rel="stylesheet" href="{{asset('admin-assets/css/nice-select.css')}}">
    <link rel="stylesheet" href="{{asset('admin-assets/css/flaticon_kindedo.css')}}">
    <link rel="stylesheet" href="{{asset('admin-assets/css/font-awesome-pro.css')}}">
-   <link rel="stylesheet" href="{{asset('admin-assets/css/odometer.css')}}">
    <link rel="stylesheet" href="{{asset('admin-assets/css/spacing.css')}}">
    <link rel="stylesheet" href="{{asset('admin-assets/css/main.css')}}">
 </head>
@@ -58,8 +57,10 @@
    <header>
       <div class="bd-header">
          <!-- header top area start  -->
-         <div class="bd-header-top d-none d-lg-block p-relative">
-            <div class="bd-header-top-bg"></div>
+         <div class="bd-header-top d-none d-lg-block bg-white">
+            <div class="bd-header-top-shape">
+               <img src="{{asset('admin-assets/img/shape/wave-section-break.png')}}" alt="Shape not found">
+            </div>
             <div class="container">
                <div class="row">
                   <div class="col-12">
@@ -104,7 +105,7 @@
          <!-- header top area end -->
 
          <!-- header bottom area start -->
-         <div id="header-sticky" class="bd-header-bottom ">
+         <div id="header-sticky" class="bd-header-bottom bd-header-transparent">
             <div class="container">
                <div class="mega-menu-wrapper p-relative">
                   <div class="d-flex align-items-center justify-content-between">
@@ -118,7 +119,7 @@
                            <ul>
                               <li class="has-dropdown">
                                  <a href="index.html">Home</a>
-                                 <ul class="submenu submenu-2">
+                                 <ul class="submenu">
                                     <li><a href="index.html">Home Style 1</a></li>
                                     <li><a href="index-2.html">Home Style 2</a>
                                     </li>
@@ -130,7 +131,7 @@
                               </li>
                               <li class="has-dropdown has-mega-menu">
                                  <a href="programs.html">Programs</a>
-                                 <ul class="mega-menu mega-menu-2 clr-2">
+                                 <ul class="mega-menu mega-menu-2">
                                     <li>
                                        <a href="javascript:void(0);" class="d-lg-none">List 1</a>
                                        <ul>
@@ -203,7 +204,7 @@
                               </li>
                               <li class="has-dropdown">
                                  <a href="shop.html">Shop</a>
-                                 <ul class="submenu submenu-2">
+                                 <ul class="submenu">
                                     <li><a href="shop.html">Shop Main</a></li>
                                     <li><a href="shop-details.html">Shop Details</a></li>
                                     <li><a href="wishlist.html">Wishlist</a></li>
@@ -213,7 +214,7 @@
                               </li>
                               <li class="has-dropdown has-mega-menu">
                                  <a href="#">Pages</a>
-                                 <ul class="mega-menu clr-2">
+                                 <ul class="mega-menu">
                                     <li><a href="javasript:void(0);" class="mega-menu-title">Page Layout 1</a>
                                        <ul>
                                           <li> <a href="programs.html">Program</a></li>
@@ -245,7 +246,7 @@
                               </li>
                               <li class="has-dropdown">
                                  <a href="news.html">News</a>
-                                 <ul class="submenu submenu-2">
+                                 <ul class="submenu">
                                     <li><a href="news.html">News Default</a></li>
                                     <li><a href="news-sidebar.html">News Sidebar</a></li>
                                     <li><a href="news-classic.html">News Classic</a></li>
@@ -300,28 +301,203 @@
 
    <!-- main area start here  -->
    <main>
-      <!-- breadcrumb area start here -->
-      <section class="bd-breadcrumb-area p-relative fix theme-bg">
-         <!-- breadcrumb background image -->
-         <div class="bd-breadcrumb-bg" data-background="{{asset('admin-assets/img/bg/breadcrumb-bg.jpg')}}"></div>
-         <div class="bd-breadcrumb-wrapper mb-60 p-relative">
-            <div class="container">
-               <div class="bd-breadcrumb-shape d-none d-sm-block p-relative">
-                  <div class="bd-breadcrumb-shape-1">
-                     <img src="{{asset('admin-assets/img/shape/curved-line-2.png')}}" alt="img not found!">
+      <!-- hero area start here  -->
+      <section class="bd-hero-area">
+
+         <!-- hero area bottom shape  -->
+
+         <div class="bd-hero-bottom-shape d-none d-md-block">
+            <img src="{{asset('admin-assets/img/shape/wave-section-break.png')}}" alt="Shape not found">
+         </div>
+
+         <!-- hero area bg here  -->
+         <div class="bd-gradient-bg"></div>
+
+         <!-- hero area side social  -->
+         <div class="bd-hero-social-wrapper">
+            <div class="bd-hero-social">
+               <a href="#"><i class="fa-brands fa-facebook-f"></i>facebook</a>
+            </div>
+            <div class="bd-hero-social">
+               <a href="#"><i class="fa-brands fa-twitter"></i>twitter</a>
+            </div>
+            <div class="bd-hero-social">
+               <a href="#"><i class="fa-brands fa-youtube"></i>youtube</a>
+            </div>
+         </div>
+         <div class="container">
+            <div class="bd-hero-inner">
+               <div class="bd-hero-shape-wrapper">
+                  <div class="bd-hero-shape bd-hero-shape-1 d-none d-lg-block">
+                     <img src="{{asset('admin-assets/img/shape/curved-line-1.png')}}" alt="Shape not found">
                   </div>
-                  <div class="bd-breadcrumb-shape-2">
-                     <img src="{{asset('admin-assets/img/shape/white-curved-line.png')}}" alt="img not found!">
+                  <div class="bd-hero-shape bd-hero-shape-2">
+                     <img src="{{asset('admin-assets/img/shape/curved-line-2.png')}}" alt="Shape not found">
                   </div>
                </div>
-               <div class="row justify-content-center">
-                  <div class="col-xl-10">
-                     <div class="bd-breadcrumb d-flex align-items-center justify-content-center">
-                        <div class="bd-breadcrumb-content text-center">
-                           <h1 class="bd-breadcrumb-title">About</h1>
-                           <div class="bd-breadcrumb-list">
-                              <span><a href="index.html"><i class="flaticon-hut"></i>Kindedo</a></span>
-                              <span>About</span>
+               <div class="row align-items-center">
+                  <div class="col-lg-6 col-md-7">
+                     <div class="bd-hero-content">
+                        <span class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".2s">Kindergarten
+                           Program</span>
+                        <h1 class="bd-hero-title wow fadeInUp" data-wow-duration="1s" data-wow-delay=".35s">
+                           Best Product for Your Kids
+                        </h1>
+                        <div class="bd-hero-btn wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">
+                           <a href="shop.html" class="bd-btn">
+                              <span class="bd-btn-inner">
+                                 <span class="bd-btn-normal">Shop Latest Product</span>
+                                 <span class="bd-btn-hover">Shop Latest Product</span>
+                              </span>
+                           </a>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-lg-6">
+                     <div class="bd-hero-thumb-wrapper">
+                        <div class="bd-hero-thumb p-relative">
+                           <img src="{{asset('admin-assets/img/hero/hero-1.png')}}" alt="Image not found">
+                        </div>
+                        <div class="bd-hero-thumb-shape">
+                           <img src="{{asset('admin-assets/img/shape/curved-big.svg')}}" alt="img not found!">
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- hero area end here  -->
+
+      <!-- shop category area start here -->
+      <section class="bd-shop-cat-area pt-120 pb-90">
+         <div class="container">
+            <div class="row justify-content-center">
+               <div class="col-lg-8 col-md-10">
+                  <div class="bd-section-title-wrapper text-center mb-55 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".2s">
+                     <h2 class="bd-section-title mb-0">Shop By Age</h2>
+                     <p>Our multi-level kindergarten programs cater to the age group of 2-12 years<br> with a curriculum
+                        focussing children.</p>
+                  </div>
+               </div>
+            </div>
+            <div class="row justify-content-center">
+               <div class="col-lg-3 col-md-6 col-6">
+                  <div class="bd-shop-cat-wrap mb-30 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s">
+                     <a href="shop.html">
+                        <div class="bd-shop-cat">
+                           <div class="bd-shop-cat-content">
+                              <div class="bd-shop-cat-title cat-1">
+                                 <h4>2-4</h4>
+                              </div>
+                              <span>Years</span>
+                           </div>
+                        </div>
+                     </a>
+                  </div>
+               </div>
+               <div class="col-lg-3 col-md-6 col-6">
+                  <div class="bd-shop-cat-wrap mb-30 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">
+                     <a href="shop.html">
+                        <div class="bd-shop-cat">
+                           <div class="bd-shop-cat-content">
+                              <div class="bd-shop-cat-title cat-2">
+                                 <h4>4-6</h4>
+                              </div>
+                              <span>Years</span>
+                           </div>
+                        </div>
+                     </a>
+                  </div>
+               </div>
+               <div class="col-lg-3 col-md-6 col-6">
+                  <div class="bd-shop-cat-wrap mb-30 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".6s">
+                     <a href="shop.html">
+                        <div class="bd-shop-cat">
+                           <div class="bd-shop-cat-content">
+                              <div class="bd-shop-cat-title cat-3">
+                                 <h4>6-8</h4>
+                              </div>
+                              <span>Years</span>
+                           </div>
+                        </div>
+                     </a>
+                  </div>
+               </div>
+               <div class="col-lg-3 col-md-6 col-6">
+                  <div class="bd-shop-cat-wrap mb-30 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".7s">
+                     <a href="shop.html">
+                        <div class="bd-shop-cat">
+                           <div class="bd-shop-cat-content">
+                              <div class="bd-shop-cat-title cat-4">
+                                 <h4>8-12</h4>
+                              </div>
+                              <span>Years</span>
+                           </div>
+                        </div>
+                     </a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- shop category area end here-->
+
+      <!-- product category area start here-->
+      <section class="bd-product-cat-area pb-95">
+         <div class="container">
+            <div class="row">
+               <div class="col-lg-7">
+                  <div class="bd-product-cat cat-xl theme-bg-6 mb-25 wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".3s">
+                     <div class="bd-product-cat-content-wrapper">
+                        <div class="bd-product-cat-bg" data-background="{{asset('admin-assets/img/shop/cat-1.png')}}"></div>
+                        <div class="bd-product-cat-content">
+                           <h4 class="bd-product-cat-title">Kids Toy</h4>
+                           <p>View Product by Kids Toy</p>
+                           <div class="bd-product-cat-btn">
+                              <a href="shop.html">Shop Now</a>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-lg-5">
+                  <div class="bd-product-cat mb-25 wow fadeInRight" data-wow-duration="1s" data-wow-delay=".3s">
+                     <div class="bd-product-cat-content-wrapper">
+                        <div class="bd-product-cat-bg" data-background="{{asset('admin-assets/img/shop/cat-2.png')}}"></div>
+                        <div class="bd-product-cat-content">
+                           <h4 class="bd-product-cat-title">New</h4>
+                           <p>View Product by New Items</p>
+                           <div class="bd-product-cat-btn">
+                              <a href="shop.html">Shop Now</a>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-lg-5">
+                  <div class="bd-product-cat mb-25 wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".3s">
+                     <div class="bd-product-cat-content-wrapper">
+                        <div class="bd-product-cat-bg" data-background="{{asset('admin-assets/img/shop/cat-3.png')}}"></div>
+                        <div class="bd-product-cat-content">
+                           <h4 class="bd-product-cat-title">Trending</h4>
+                           <p>View Product by Trending</p>
+                           <div class="bd-product-cat-btn">
+                              <a href="shop.html">Shop Now</a>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-lg-7">
+                  <div class="bd-product-cat cat-xl theme-bg-6 mb-25 wow fadeInRight" data-wow-duration="1s" data-wow-delay=".3s">
+                     <div class="bd-product-cat-content-wrapper">
+                        <div class="bd-product-cat-bg" data-background="{{asset('admin-assets/img/shop/cat-4.png')}}"></div>
+                        <div class="bd-product-cat-content">
+                           <h4 class="bd-product-cat-title">Accessories</h4>
+                           <p>View Product by Accessories</p>
+                           <div class="bd-product-cat-btn">
+                              <a href="shop.html">Shop Now</a>
                            </div>
                         </div>
                      </div>
@@ -329,87 +505,414 @@
                </div>
             </div>
          </div>
-         <div class="bd-wave-wrapper bd-wave-wrapper-3">
-            <div class="bd-wave bd-wave-3"></div>
-            <div class="bd-wave bd-wave-3"></div>
-         </div>
       </section>
-      <!-- breadcrumb area end here  -->
+      <!-- product category area end here-->
 
-      <!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-
-      <!-- promotion area start here  -->
-      <section class="bd-promotion-area pt-120 pb-60">
+      <!-- product area start here-->
+      <section class="bd-product-area pt-120 pb-120 theme-bg-11">
          <div class="container">
-            <div class="row align-items-center">
-               <div class="col-xl-6 col-lg-6">
-                  <div class="bd-promotion-thumb-wrapper mb-60 wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".3s">
-                     <div class="bd-promotion-thumb">
-                        <div class="bd-promotion-thumb-mask p-relative">
-                           <img src="{{asset('admin-assets/img/promotion/2.png')}}" alt="Image not found">
-                           <div class="panel wow"></div>
-                        </div>
-                     </div>
-                     <div class="bd-promotion-shape d-none d-lg-block">
-                        <img src="{{asset('admin-assets/img/shape/tripple-line.png')}}" alt="Shape not found">
+            <div class="row align-items-end">
+               <div class="col-lg-8">
+                  <div class="bd-section-title-wrapper text-center text-lg-start mb-55 wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".2s">
+                     <h2 class="bd-section-title mb-0">Latest Products</h2>
+                     <p>Set your kids up for success with these back-to-school must-haves. Perfect for preschoolers,
+                        kindergarteners, and those in first grade.</p>
+                  </div>
+               </div>
+               <div class="col-lg-4">
+                  <div class="bd-product-filter-btn-wrapper d-flex justify-content-center justify-content-lg-end mb-55 wow fadeInRight" data-wow-duration="1s" data-wow-delay=".2s">
+                     <div class="bd-product-filter-btn bd-filter-btn">
+                        <button data-filter=".c-1" class="active">New Collection</button>
+                        <button data-filter=".c-2" class="">Trending</button>
+                        <button data-filter=".c-3" class="">Sale</button>
                      </div>
                   </div>
                </div>
-               <div class="col-xl-6 col-lg-6">
-                  <div class="bd-promotion mb-60 wow fadeInRight" data-wow-duration="1s" data-wow-delay=".3s">
-                     <div class="bd-section-title-wrapper mb-35">
-                        <h2 class="bd-section-title mb-10">Best for Your Kids</h2>
-                        <span>
-                           Some states and countries implement mandatory early childhood education
-                           such rules, many preschool.
-                        </span>
-                        <p> Being brave isn’t always a grand gesture sometimes it just means having a go attempting
-                           that difficult question, offering an answer in a lesson when you’re
-                           simply really trying new.
-                        </p>
-                     </div>
-                     <div class="bd-promotion-list mb-50">
-                        <ul>
-                           <li>We believe every child is intelligent so we care.</li>
-                           <li>Teachers make a difference of your child.</li>
-                        </ul>
-                     </div>
-                     <div class="bd-promotion-btn-wrapper flex-wrap">
-                        <div class="bd-promotion-btn">
-                           <a href="#" class="bd-btn">
-                              <span class="bd-btn-inner">
-                                 <span class="bd-btn-normal">View More</span>
-                                 <span class="bd-btn-hover">View More</span>
-                              </span>
-                           </a>
+            </div>
+            <div class="row grid">
+               <div class="col-xl-4 col-lg-6 col-md-6  col-sm-6 grid-item c-1 c-3">
+                  <div class="bd-product mb-25 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
+                     <div class="bd-product-thumb-wrapper">
+                        <div class="bd-product-thumb bd-product-thumb-active swiper-container">
+                           <div class="swiper-wrapper">
+                              <div class="swiper-slide">
+                                 <img src="{{asset('admin-assets/img/shop/1.1.png')}}" alt="Image not found!">
+                              </div>
+                              <div class="swiper-slide">
+                                 <img src="{{asset('admin-assets/img/shop/1.2.png')}}" alt="Image not found!">
+                              </div>
+                              <div class="swiper-slide">
+                                 <img src="{{asset('admin-assets/img/shop/1.3.png')}}" alt="Image not found!">
+                              </div>
+                           </div>
                         </div>
-                        <div class="bd-promotion-btn-2 bd-pulse-btn btn-2">
-                           <a href="https://www.youtube.com/watch?v=l62SIcbCPwo" class="popup-video"><i class="flaticon-play-button"></i> Promotional Video</a>
+                        <div class="bd-product-tag">
+                           <span class="theme-bg">Sale</span>
+                        </div>
+                        <div class="bd-product-action-wrapper">
+                           <div class="bd-product-action-item">
+                              <a href="wishlist.html"><i class="fa-regular fa-heart"></i></a>
+                           </div>
+                           <div class="bd-product-action-item">
+                              <a href="cart.html"><i class="fa-regular fa-cart-shopping"></i></a>
+                           </div>
+                           <div class="bd-product-action-item">
+                              <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                 <i class="fa-regular fa-eye"></i>
+                              </button>
+                           </div>
+                        </div>
+                        <!-- product slider pagination -->
+                        <div class="bd-dots-pagination bd-product-thumb-pagination"></div>
+                     </div>
+                     <div class="bd-product-content">
+                        <h4 class="bd-product-title"><a href="shop-details.html">Plush Toy Giraffe</a></h4>
+                        <div class="bd-product-rating">
+                           <a href="#"><i class="fas fa-star"></i></a>
+                           <a href="#"><i class="fas fa-star"></i></a>
+                           <a href="#"><i class="fas fa-star"></i></a>
+                           <a href="#"><i class="fas fa-star"></i></a>
+                           <a href="#"><i class="fas fa-star"></i></a>
+                        </div>
+                        <div class="bd-product-price">
+                           <span>$23.00</span>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-xl-4 col-lg-6 col-md-6  col-sm-6 grid-item c-1 c-2">
+                  <div class="bd-product mb-25 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s">
+                     <div class="bd-product-thumb-wrapper">
+                        <div class="bd-product-thumb bd-product-thumb-active-2 swiper-container">
+                           <div class="swiper-wrapper">
+                              <div class="swiper-slide">
+                                 <img src="{{asset('admin-assets/img/shop/2.1.png')}}" alt="Image not found!">
+                              </div>
+                              <div class="swiper-slide">
+                                 <img src="{{asset('admin-assets/img/shop/2.2.png')}}" alt="Image not found!">
+                              </div>
+                              <div class="swiper-slide">
+                                 <img src="{{asset('admin-assets/img/shop/2.3.png')}}" alt="Image not found!">
+                              </div>
+                           </div>
+                        </div>
+                        <div class="bd-product-tag">
+                           <span class="theme-bg">New</span>
+                        </div>
+                        <div class="bd-product-action-wrapper">
+                           <div class="bd-product-action-item">
+                              <a href="wishlist.html"><i class="fa-regular fa-heart"></i></a>
+                           </div>
+                           <div class="bd-product-action-item">
+                              <a href="cart.html"><i class="fa-regular fa-cart-shopping"></i></a>
+                           </div>
+                           <div class="bd-product-action-item">
+                              <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                 <i class="fa-regular fa-eye"></i>
+                              </button>
+                           </div>
+                        </div>
+                        <!-- product slider pagination -->
+                        <div class="bd-dots-pagination bd-product-thumb-pagination-2"></div>
+                     </div>
+                     <div class="bd-product-content">
+                        <h4 class="bd-product-title"><a href="shop-details.html">Wooden Alphabet</a></h4>
+                        <div class="bd-product-rating">
+                           <a href="#"><i class="fas fa-star"></i></a>
+                           <a href="#"><i class="fas fa-star"></i></a>
+                           <a href="#"><i class="fas fa-star"></i></a>
+                           <a href="#"><i class="fas fa-star"></i></a>
+                           <a href="#"><i class="fas fa-star"></i></a>
+                        </div>
+                        <div class="bd-product-price">
+                           <span>$15.00</span>
+                           <del>$20.00</del>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-xl-4 col-lg-6 col-md-6  col-sm-6 grid-item c-1 c-3">
+                  <div class="bd-product mb-25 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">
+                     <div class="bd-product-thumb-wrapper">
+                        <div class="bd-product-thumb bd-product-thumb-active-3 swiper-container">
+                           <div class="swiper-wrapper">
+                              <div class="swiper-slide">
+                                 <img src="{{asset('admin-assets/img/shop/3.1.png')}}" alt="Image not found!">
+                              </div>
+                              <div class="swiper-slide">
+                                 <img src="{{asset('admin-assets/img/shop/3.2.png')}}" alt="Image not found!">
+                              </div>
+                              <div class="swiper-slide">
+                                 <img src="{{asset('admin-assets/img/shop/3.3.png')}}" alt="Image not found!">
+                              </div>
+                           </div>
+                        </div>
+                        <div class="bd-product-tag">
+                           <span class="grey-bg">Sold Out</span>
+                        </div>
+                        <div class="bd-product-action-wrapper">
+                           <div class="bd-product-action-item">
+                              <a href="wishlist.html"><i class="fa-regular fa-heart"></i></a>
+                           </div>
+                           <div class="bd-product-action-item">
+                              <a href="cart.html"><i class="fa-regular fa-cart-shopping"></i></a>
+                           </div>
+                           <div class="bd-product-action-item">
+                              <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                 <i class="fa-regular fa-eye"></i>
+                              </button>
+                           </div>
+                        </div>
+                        <!-- product slider pagination -->
+                        <div class="bd-dots-pagination bd-product-thumb-pagination-3"></div>
+                     </div>
+                     <div class="bd-product-content">
+                        <h4 class="bd-product-title"><a href="shop-details.html">Baby Shoes</a></h4>
+                        <div class="bd-product-rating">
+                           <a href="#"><i class="fas fa-star"></i></a>
+                           <a href="#"><i class="fas fa-star"></i></a>
+                           <a href="#"><i class="fas fa-star"></i></a>
+                           <a href="#"><i class="fas fa-star"></i></a>
+                           <a href="#"><i class="fas fa-star"></i></a>
+                        </div>
+                        <div class="bd-product-price">
+                           <span>$33.00</span>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-xl-4 col-lg-6 col-md-6  col-sm-6 grid-item c-1 c-2">
+                  <div class="bd-product mb-25 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
+                     <div class="bd-product-thumb-wrapper">
+                        <div class="bd-product-thumb bd-product-thumb-active-4 swiper-container">
+                           <div class="swiper-wrapper">
+                              <div class="swiper-slide">
+                                 <img src="{{asset('admin-assets/img/shop/4.1.png')}}" alt="Image not found!">
+                              </div>
+                              <div class="swiper-slide">
+                                 <img src="{{asset('admin-assets/img/shop/4.2.png')}}" alt="Image not found!">
+                              </div>
+                              <div class="swiper-slide">
+                                 <img src="{{asset('admin-assets/img/shop/4.3.png')}}" alt="Image not found!">
+                              </div>
+                           </div>
+                        </div>
+                        <div class="bd-product-tag">
+                           <span class="theme-bg-3">Hot</span>
+                        </div>
+                        <div class="bd-product-action-wrapper">
+                           <div class="bd-product-action-item">
+                              <a href="wishlist.html"><i class="fa-regular fa-heart"></i></a>
+                           </div>
+                           <div class="bd-product-action-item">
+                              <a href="cart.html"><i class="fa-regular fa-cart-shopping"></i></a>
+                           </div>
+                           <div class="bd-product-action-item">
+                              <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                 <i class="fa-regular fa-eye"></i>
+                              </button>
+                           </div>
+                        </div>
+                        <!-- product slider pagination -->
+                        <div class="bd-dots-pagination bd-product-thumb-pagination-4"></div>
+                     </div>
+                     <div class="bd-product-content">
+                        <h4 class="bd-product-title"><a href="shop-details.html">Baby bouncer</a></h4>
+                        <div class="bd-product-rating">
+                           <a href="#"><i class="fas fa-star"></i></a>
+                           <a href="#"><i class="fas fa-star"></i></a>
+                           <a href="#"><i class="fas fa-star"></i></a>
+                           <a href="#"><i class="fas fa-star"></i></a>
+                           <a href="#"><i class="fas fa-star"></i></a>
+                        </div>
+                        <div class="bd-product-price">
+                           <span>$25.00</span>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-xl-4 col-lg-6 col-md-6  col-sm-6 grid-item c-1 c-2 c-3">
+                  <div class="bd-product mb-25 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s">
+                     <div class="bd-product-thumb-wrapper">
+                        <div class="bd-product-thumb bd-product-thumb-active-5 swiper-container">
+                           <div class="swiper-wrapper">
+                              <div class="swiper-slide">
+                                 <img src="{{asset('admin-assets/img/shop/5.1.png')}}" alt="Image not found!">
+                              </div>
+                              <div class="swiper-slide">
+                                 <img src="{{asset('admin-assets/img/shop/5.2.png')}}" alt="Image not found!">
+                              </div>
+                              <div class="swiper-slide">
+                                 <img src="{{asset('admin-assets/img/shop/5.3.png')}}" alt="Image not found!">
+                              </div>
+                           </div>
+                        </div>
+                        <div class="bd-product-tag">
+                           <span class="theme-bg">Sale</span>
+                        </div>
+                        <div class="bd-product-action-wrapper">
+                           <div class="bd-product-action-item">
+                              <a href="wishlist.html"><i class="fa-regular fa-heart"></i></a>
+                           </div>
+                           <div class="bd-product-action-item">
+                              <a href="cart.html"><i class="fa-regular fa-cart-shopping"></i></a>
+                           </div>
+                           <div class="bd-product-action-item">
+                              <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                 <i class="fa-regular fa-eye"></i>
+                              </button>
+                           </div>
+                        </div>
+                        <!-- product slider pagination -->
+                        <div class="bd-dots-pagination bd-product-thumb-pagination-5"></div>
+                     </div>
+                     <div class="bd-product-content">
+                        <h4 class="bd-product-title"><a href="shop-details.html">Naughty Furry</a></h4>
+                        <div class="bd-product-rating">
+                           <a href="#"><i class="fas fa-star"></i></a>
+                           <a href="#"><i class="fas fa-star"></i></a>
+                           <a href="#"><i class="fas fa-star"></i></a>
+                           <a href="#"><i class="fas fa-star"></i></a>
+                           <a href="#"><i class="fas fa-star"></i></a>
+                        </div>
+                        <div class="bd-product-price">
+                           <span>$43.00</span>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-xl-4 col-lg-6 col-md-6  col-sm-6 grid-item c-1 c-3 c-2">
+                  <div class="bd-product mb-25 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">
+                     <div class="bd-product-thumb-wrapper">
+                        <div class="bd-product-thumb bd-product-thumb-active-6 swiper-container">
+                           <div class="swiper-wrapper">
+                              <div class="swiper-slide">
+                                 <img src="{{asset('admin-assets/img/shop/6.1.png')}}" alt="Image not found!">
+                              </div>
+                              <div class="swiper-slide">
+                                 <img src="{{asset('admin-assets/img/shop/6.2.png')}}" alt=" Image not found!">
+                              </div>
+                              <div class="swiper-slide">
+                                 <img src="{{asset('admin-assets/img/shop/6.3.png')}}" alt="Image not found!">
+                              </div>
+                           </div>
+                        </div>
+                        <div class="bd-product-tag">
+                           <span class="theme-bg">Sale</span>
+                        </div>
+                        <div class="bd-product-action-wrapper">
+                           <div class="bd-product-action-item">
+                              <a href="wishlist.html"><i class="fa-regular fa-heart"></i></a>
+                           </div>
+                           <div class="bd-product-action-item">
+                              <a href="cart.html"><i class="fa-regular fa-cart-shopping"></i></a>
+                           </div>
+                           <div class="bd-product-action-item">
+                              <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                 <i class="fa-regular fa-eye"></i>
+                              </button>
+                           </div>
+                        </div>
+                        <!-- product slider pagination -->
+                        <div class="bd-dots-pagination bd-product-thumb-pagination-6"></div>
+                     </div>
+                     <div class="bd-product-content">
+                        <h4 class="bd-product-title"><a href="shop-details.html">Giraffe Toy</a></h4>
+                        <div class="bd-product-rating">
+                           <a href="#"><i class="fas fa-star"></i></a>
+                           <a href="#"><i class="fas fa-star"></i></a>
+                           <a href="#"><i class="fas fa-star"></i></a>
+                           <a href="#"><i class="fas fa-star"></i></a>
+                           <a href="#"><i class="fas fa-star"></i></a>
+                        </div>
+                        <div class="bd-product-price">
+                           <span>$99.00</span>
                         </div>
                      </div>
                   </div>
                </div>
             </div>
+            <div class="row">
+               <div class="col-12">
+                  <div class="bd-product-more-btn mt-35 text-center wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
+                     <a href="shop.html" class="bd-btn">
+                        <span class="bd-btn-inner">
+                           <span class="bd-btn-normal">View More</span>
+                           <span class="bd-btn-hover">View More</span>
+                        </span>
+                     </a>
+                  </div>
+               </div>
+            </div>
          </div>
       </section>
-      <!-- promotion area end here  -->
+      <!-- product area end here-->
+
+      <!-- feedback area start here-->
+      <section class="bd-feedback-area pb-60 pt-120">
+         <div class="container">
+            <div class="row align-items-center">
+               <div class="col-lg-6">
+                  <div class="bd-feedback-thumb-wrapper mb-60 p-relative wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".3s">
+                     <div class="bd-feedback-thumb p-relative">
+                        <div class="bd-feedback-path-shape d-none d-md-block">
+                           <img src="{{asset('admin-assets/img/shape/radient-path.svg')}}" alt="img not found!">
+                        </div>
+                        <div class="bd-feedback-thumb-mask p-relative">
+                           <img src="{{asset('admin-assets/img/feedback/1.png')}}" alt="img not found!">
+                           <div class="panel wow"></div>
+                        </div>
+                     </div>
+                     <div class="bd-feedback-thumb-shape">
+                        <div class="bd-feedback-thumb-shape p-absolute">
+                           <img src="{{asset('admin-assets/img/shape/home-3-shape-1.png')}}" alt="img not found!">
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-lg-6">
+                  <div class="bd-section-title-wrapper mb-40 wow fadeInRight" data-wow-duration="1s" data-wow-delay=".3s">
+                     <h2 class="bd-section-title mb-5">Playful learning<br>
+                        helps children</h2>
+                     <p>Early childhood development programs were first introduced during the Soviet with the
+                        establish pre schools</p>
+                  </div>
+                  <div class="bd-feedback theme-bg-7 mb-50 wow fadeInRight" data-wow-duration="1s" data-wow-delay=".3s">
+                     <div class="bd-feedback-content">
+                        <p class="mb-25">“This seemed great for my kindergartener-to-be, a full santa believer. Not so
+                           the winter
+                           holiday episode, and I'm not sure how I'm going to police. I really happy to see my child
+                           there”</p>
+                        <h5 class="bd-feedback-author">-O.F. Donaldson</h5>
+                     </div>
+                  </div>
+                  <div class="bd-feedback-btn mb-60 wow fadeInRight" data-wow-duration="1s" data-wow-delay=".3s">
+                     <a href="about.html" class="bd-btn">
+                        <span class="bd-btn-inner">
+                           <span class="bd-btn-normal">About us</span>
+                           <span class="bd-btn-hover">About us</span>
+                        </span>
+                     </a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- feedback area end here-->
 
       <!-- feature area start here-->
-      <div class="bd-feature-area p-relative theme-bg pt-120 pb-120">
-         <div class="bd-feature-bottom-shape">
-            <img src="{{asset('admin-assets/img/shape/wave-section-break.png')}}" alt="img not found!">
-         </div>
+      <div class="bd-feature-area theme-bg pt-120 pb-120">
          <div class="container">
             <div class="row justify-content-center">
                <div class="col-lg-8 col-md-10">
                   <div class="bd-section-title-wrapper is-white text-center mb-55 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
-                     <h2 class="bd-section-title mb-0">Our Core Value</h2>
+                     <h2 class="bd-section-title mb-0">Why Kindedo Best</h2>
                      <p>View classes by age, program, or subject. Check out upcoming camps<br> and special events too!
                      </p>
                   </div>
                </div>
             </div>
-            <div class="bd-feature-wrapper wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">
+            <div class="bd-feature-wrapper wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s">
                <div class="row">
                   <div class="col-12">
                      <ul class="feature">
@@ -417,9 +920,9 @@
                            <div class="bd-feature">
                               <div class="bd-feature-content">
                                  <div class="bd-feature-icon icon-1">
-                                    <i class="flaticon-book"></i>
+                                    <i class="flaticon-exclusive"></i>
                                  </div>
-                                 <h4 class="bd-feature-title">Learning & Fun</h4>
+                                 <h4 class="bd-feature-title">Exclusive</h4>
                                  <p>When it comes to success in the classroom.</p>
                               </div>
                            </div>
@@ -428,9 +931,9 @@
                            <div class="bd-feature">
                               <div class="bd-feature-content">
                                  <div class="bd-feature-icon icon-2">
-                                    <i class="flaticon-soup"></i>
+                                    <i class="flaticon-humanitarian-help"></i>
                                  </div>
-                                 <h4 class="bd-feature-title">Healthy Meals</h4>
+                                 <h4 class="bd-feature-title">Highest Safety</h4>
                                  <p>Safety matters just as much as the academics.</p>
                               </div>
                            </div>
@@ -439,9 +942,9 @@
                            <div class="bd-feature">
                               <div class="bd-feature-content">
                                  <div class="bd-feature-icon icon-3">
-                                    <i class="flaticon-child"></i>
+                                    <i class="flaticon-like-1"></i>
                                  </div>
-                                 <h4 class="bd-feature-title">Children Safety</h4>
+                                 <h4 class="bd-feature-title">Hassle Free</h4>
                                  <p>Consistent with Friend ship’s focus on kindedo.</p>
                               </div>
                            </div>
@@ -465,338 +968,113 @@
       </div>
       <!-- feature area end here-->
 
-      <!-- promotion area start here  -->
-      <section class="bd-promotion-area-2 pt-120 pb-60 fix">
-         <div class="container">
-            <div class="row align-items-center">
-               <div class="col-xl-6 col-lg-6">
-                  <div class="bd-promotion bd-promotion-2 mb-60 wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".3s">
-                     <div class="bd-section-title-wrapper mb-35">
-                        <h2 class="bd-section-title mb-10">Friendly atmosphere
-                           for all kids</h2>
-                        <span class="mb-10 d-inline-block">
-                           A Swiss
-                           follower of Jean-Jacques Rousseau’s belief in the inherent goodness of children helper.
-
-                        </span>
-                        <p>The kindergarten was developed in the nineteenth century by Friedrich Froebel, a German
-                           reformer and educator. He built upon the ideas of Johann Heinrich Pestalozzi.
-                        </p>
-                     </div>
-                     <div class="bd-promotion-list-2">
-                        <ul>
-                           <li>
-                              <div class="bd-promotion-icon">
-                                 <i class="flaticon-exclusive theme-bg-2"></i>
-                              </div>
-                              <span>Full Day Sessions</span>
-                           </li>
-                           <li>
-                              <div class="bd-promotion-icon">
-                                 <i class="flaticon-whiteboard theme-bg"></i>
-                              </div>
-                              <span>Varied Classes</span>
-                           </li>
-                        </ul>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-xl-6 col-lg-6">
-                  <div class="bd-promotion-thumb-wrapper mb-60 wow fadeInRight" data-wow-duration="1s" data-wow-delay=".3s">
-                     <div class="bd-promotion-thumb">
-                        <div class="bd-promotion-thumb-mask p-relative">
-                           <img src="{{asset('admin-assets/img/promotion/1.png')}}" alt="Image not found">
-                           <div class="panel-2 wow"></div>
-                        </div>
-                     </div>
-                     <div class="bd-promotion-shape d-none d-lg-block">
-                        <img src="{{asset('admin-assets/img/shape/tripple-line.png')}}" alt="Shape not found">
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </section>
-      <!-- promotion area end here  -->
-
-      <!-- testimonial area start here  -->
-      <section class="bd-testimonial-area-2 pb-120 p-relative pt-120 theme-bg">
-         <div class="bd-testimonial-bottom-shape">
-            <img src="{{asset('admin-assets/img/shape/wave-section-break.png')}}" alt="img not found!">
+      <!-- blog area start here  -->
+      <section class="bd-blog-area-2 p-relative fix pt-120 pb-120">
+         <div class="bd-blog-shape d-none d-md-block">
+            <img src="{{asset('admin-assets/img/shape/blog-shape.png')}}" alt="Shape not found">
          </div>
          <div class="container">
-            <div class="row justify-content-center">
-               <div class="col-lg-8">
-                  <div class="bd-section-title-wrapper is-white z-index-1 p-relative text-center mb-55 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
-                     <h2 class="bd-section-title mb-0">Parents Says</h2>
-                     <p>With the help of teachers and the environment as the third teacher, students<br> have
-                        opportunities to confidently take risks.</p>
+            <div class="bd-blog-section-title mb-40">
+               <div class="row align-items-end">
+                  <div class="col-lg-6">
+                     <div class="bd-section-title-wrapper mb-0 wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".3s">
+                        <h2 class="bd-section-title mb-0">Kindedo News</h2>
+                        <p>It is our goal to provide age appropriate opportuniy for every child enrolled in Kindedo Kids
+                           Club
+                           enrichment classes.</p>
+                     </div>
+                  </div>
+                  <div class="col-lg-6">
+                     <div class="bd-blog-navigation mb-15 wow fadeInRight" data-wow-duration="1s" data-wow-delay=".3s">
+                        <button class="bd-blog-prev">
+                           <i></i><i class="fa-regular fa-angle-left"></i>
+                        </button>
+                        <button class="bd-blog-next">
+                           <i class="fa-regular fa-angle-right"></i>
+                        </button>
+                     </div>
                   </div>
                </div>
             </div>
             <div class="row">
                <div class="col-12">
-                  <div class="bd-testimonial-active-2 swiper-container wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">
+                  <div class="bd-blog-active swiper-container wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">
                      <div class="swiper-wrapper">
                         <div class="swiper-slide">
-                           <div class="bd-testimonial-2 mr-5 theme-bg-6 mb-25">
-                              <div class="bd-testimonial-rating mb-30">
-                                 <a href="#"><i class="fas fa-star"></i></a>
-                                 <a href="#"><i class="fas fa-star"></i></a>
-                                 <a href="#"><i class="fas fa-star"></i></a>
-                                 <a href="#"><i class="fas fa-star"></i></a>
-                                 <a href="#"><i class="fas fa-star"></i></a>
-                              </div>
-                              <div class="bd-testimonial-content-2 mb-35">
-                                 <p>Happy Christmas to the whole Kindedo from everyone at Monkton. A big thank you to
-                                    Kindedo pupil Will who lent his Kindedo to this card, it's very usefull for
-                                    children, join kindedo for better future.</p>
-                              </div>
-                              <div class="bd-testimonial-avatar d-flex align-items-center">
-                                 <div class="bd-testimonial-avatar-thumb">
-                                    <img src="{{asset('admin-assets/img/testimonials/1.png')}}" alt="testimonial avatar">
+                           <div class="bd-blog">
+                              <a href="news-details.html">
+                                 <div class="bd-blog-thumb">
+                                    <img src="{{asset('admin-assets/img/blog/2.jpg')}}" alt="blog image">
                                  </div>
-                                 <h6 class="bd-testimonial-avatar-title-2 mb-0">Norma J. Johnston</h6>
-                                 <div class="bd-testimonial-quote d-none d-sm-block clr-2">
-                                    <i class="flaticon-quote"></i>
+                              </a>
+                              <div class="bd-blog-content bd-blog-content-2">
+                                 <div class="bd-blog-date-2">
+                                    <span>22 Jan 2022</span>
                                  </div>
+                                 <div class="bd-blog-meta">
+                                    <span><i class="fas fa-user"></i> by <a href="news.html">Alex</a></span>
+                                    <span><i class="fa-solid fa-comment-dots"></i><a href="news-details.html">0
+                                          Comments</a></span>
+                                 </div>
+                                 <h4 class="bd-blog-title"><a href="news-details.html">Tips to Understand Your Child
+                                       Better - Parents Guide !</a></h4>
                               </div>
                            </div>
                         </div>
                         <div class="swiper-slide">
-                           <div class="bd-testimonial-2 mr-5 clr-3 theme-bg-7">
-                              <div class="bd-testimonial-rating mb-30">
-                                 <a href="#"><i class="fas fa-star"></i></a>
-                                 <a href="#"><i class="fas fa-star"></i></a>
-                                 <a href="#"><i class="fas fa-star"></i></a>
-                                 <a href="#"><i class="fas fa-star"></i></a>
-                                 <a href="#"><i class="fas fa-star"></i></a>
-                              </div>
-                              <div class="bd-testimonial-content-2 mb-35">
-                                 <p>Your child will laugh, play and explore at Summer at MLS. From soccer, water
-                                    play, art, music, theater and science, Shabbat celebrations, cooking, they will love
-                                    our academy, kindedo is best.</p>
-
-                              </div>
-                              <div class="bd-testimonial-avatar d-flex align-items-center">
-                                 <div class="bd-testimonial-avatar-thumb">
-                                    <img src="{{asset('admin-assets/img/testimonials/2.png')}}" alt="testimonial avatar">
+                           <div class="bd-blog">
+                              <a href="news-details.html">
+                                 <div class="bd-blog-thumb">
+                                    <img src="{{asset('admin-assets/img/blog/4.jpg')}}" alt="blog image">
                                  </div>
-                                 <h6 class="bd-testimonial-avatar-title-2 mb-0">Robert M. Allen</h6>
-                                 <div class="bd-testimonial-quote d-none d-sm-block clr-1">
-                                    <i class="flaticon-quote"></i>
+                              </a>
+                              <div class="bd-blog-content bd-blog-content-2">
+                                 <div class="bd-blog-date-2">
+                                    <span>22 Nov 2022</span>
                                  </div>
+                                 <div class="bd-blog-meta">
+                                    <span><i class="fas fa-user"></i> by <a href="news.html">Alex</a></span>
+                                    <span><i class="fa-solid fa-comment-dots"></i><a href="news-details.html">04
+                                          Comments</a></span>
+                                 </div>
+                                 <h4 class="bd-blog-title"><a href="news-details.html">Why Toys for pre schoolers are
+                                       Important - ready setup</a></h4>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="swiper-slide">
+                           <div class="bd-blog">
+                              <a href="news-details.html">
+                                 <div class="bd-blog-thumb">
+                                    <img src="{{asset('admin-assets/img/blog/3.jpg')}}" alt="blog image">
+                                 </div>
+                              </a>
+                              <div class="bd-blog-content bd-blog-content-2">
+                                 <div class="bd-blog-date-2">
+                                    <span>22 Dec 2022</span>
+                                 </div>
+                                 <div class="bd-blog-meta">
+                                    <span><i class="fas fa-user"></i> by <a href="news.html">Alex</a></span>
+                                    <span><i class="fa-solid fa-comment-dots"></i><a href="news-details.html">02
+                                          Comments</a></span>
+                                 </div>
+                                 <h4 class="bd-blog-title"><a href="news-details.html">Which Toys are Best for Pre
+                                       School in Area
+                                       Kids in USA
+                                    </a></h4>
                               </div>
                            </div>
                         </div>
                      </div>
                   </div>
                   <!-- slider dots pagination -->
-                  <div class="bd-testimonial-pagination-2 bd-dots-pagination justify-content-center wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s"></div>
+                  <div class="bd-blog-pagination bd-dots-pagination wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s"></div>
                </div>
             </div>
          </div>
       </section>
-      <!-- testimonial area end here  -->
+      <!-- blog area end here  -->
 
-      <!-- teacher area start here  -->
-      <section class="bd-teacher-area pt-120 pb-120">
-         <div class="container">
-            <div class="row justify-content-center">
-               <div class="col-lg-8">
-                  <div class="bd-section-title-wrapper text-center mb-55 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
-                     <h2 class="bd-section-title mb-0">Our Best Teachers</h2>
-                     <p>With the help of teachers and the environment as the third teacher, students<br> have
-                        opportunities to confidently take risks.</p>
-                  </div>
-               </div>
-            </div>
-            <div class="row">
-               <div class="col-12">
-                  <div class="bd-teacher-active swiper-container wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">
-                     <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                           <div class="bd-teacher">
-                              <a href="teacher-details.html">
-                                 <div class="bd-teacher-thumb">
-                                    <img src="{{asset('admin-assets/img/teacher/5.jpg')}}" alt="Image not found">
-                                 </div>
-                              </a>
-                              <div class="bd-teacher-content-wrapper">
-                                 <div class="bd-teacher-content">
-                                    <h4 class="bd-teacher-title"><a href="teacher-details.html">Emmy Jonas</a></h4>
-                                    <span class="bd-teacher-des">Teacher</span>
-                                 </div>
-                                 <div class="bd-teacher-social">
-                                    <ul>
-                                       <li>
-                                          <a target="_blank" href="https://www.facebook.com/"><i class="fa-brands fa-facebook-f"></i></a>
-                                       </li>
-                                       <li>
-                                          <a target="_blank" href="https://twitter.com/"><i class="fa-brands fa-twitter"></i></a>
-                                       </li>
-                                       <li>
-                                          <a target="_blank" href="https://www.youtube.com/"><i class="fa-brands fa-youtube"></i></a>
-                                       </li>
-                                    </ul>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="swiper-slide">
-                           <div class="bd-teacher">
-                              <a href="teacher-details.html">
-                                 <div class="bd-teacher-thumb">
-                                    <img src="{{asset('admin-assets/img/teacher/3.jpg')}}" alt="Image not found">
-                                 </div>
-                              </a>
-                              <div class="bd-teacher-content-wrapper">
-                                 <div class="bd-teacher-content">
-                                    <h4 class="bd-teacher-title"><a href="teacher-details.html">Frances R.</a></h4>
-                                    <span class="bd-teacher-des">Teacher</span>
-                                 </div>
-                                 <div class="bd-teacher-social">
-                                    <ul>
-                                       <li>
-                                          <a target="_blank" href="https://www.facebook.com/"><i class="fa-brands fa-facebook-f"></i></a>
-                                       </li>
-                                       <li>
-                                          <a target="_blank" href="https://twitter.com/"><i class="fa-brands fa-twitter"></i></a>
-                                       </li>
-                                       <li>
-                                          <a target="_blank" href="https://www.youtube.com/"><i class="fa-brands fa-youtube"></i></a>
-                                       </li>
-                                    </ul>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="swiper-slide">
-                           <div class="bd-teacher">
-                              <a href="teacher-details.html">
-                                 <div class="bd-teacher-thumb">
-                                    <img src="{{asset('admin-assets/img/teacher/7.jpg')}}" alt="Image not found">
-                                 </div>
-                              </a>
-                              <div class="bd-teacher-content-wrapper">
-                                 <div class="bd-teacher-content">
-                                    <h4 class="bd-teacher-title"><a href="teacher-details.html">Cecelia D.</a></h4>
-                                    <span class="bd-teacher-des">Teacher</span>
-                                 </div>
-                                 <div class="bd-teacher-social">
-                                    <ul>
-                                       <li>
-                                          <a target="_blank" href="https://www.facebook.com/"><i class="fa-brands fa-facebook-f"></i></a>
-                                       </li>
-                                       <li>
-                                          <a target="_blank" href="https://twitter.com/"><i class="fa-brands fa-twitter"></i></a>
-                                       </li>
-                                       <li>
-                                          <a target="_blank" href="https://www.youtube.com/"><i class="fa-brands fa-youtube"></i></a>
-                                       </li>
-                                    </ul>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="swiper-slide">
-                           <div class="bd-teacher">
-                              <a href="teacher-details.html">
-                                 <div class="bd-teacher-thumb">
-                                    <img src="{{asset('admin-assets/img/teacher/2.jpg')}}" alt="Image not found">
-                                 </div>
-                              </a>
-                              <div class="bd-teacher-content-wrapper">
-                                 <div class="bd-teacher-content">
-                                    <h4 class="bd-teacher-title"><a href="teacher-details.html">Olinda L.</a></h4>
-                                    <span class="bd-teacher-des">Teacher</span>
-                                 </div>
-                                 <div class="bd-teacher-social">
-                                    <ul>
-                                       <li>
-                                          <a target="_blank" href="https://www.facebook.com/"><i class="fa-brands fa-facebook-f"></i></a>
-                                       </li>
-                                       <li>
-                                          <a target="_blank" href="https://twitter.com/"><i class="fa-brands fa-twitter"></i></a>
-                                       </li>
-                                       <li>
-                                          <a target="_blank" href="https://www.youtube.com/"><i class="fa-brands fa-youtube"></i></a>
-                                       </li>
-                                    </ul>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-
-                  <!-- teacher slider dots pagination  -->
-                  <div class="bd-teacher-pagination bd-dots-pagination wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s"></div>
-               </div>
-            </div>
-         </div>
-      </section>
-      <!-- teacher area end here  -->
-
-      <!-- counter area start here  -->
-      <div class="bd-counter-area-2 pb-90">
-         <div class="container">
-            <div class="row justify-content-center">
-               <div class="col-lg-4 col-md-10 col-sm-10">
-                  <div class="bd-counter-2 mb-30">
-                     <div class="bd-counter-2-icon">
-                        <i class="flaticon-user-interface"></i>
-                     </div>
-                     <div class="bd-counter-2-content">
-                        <div class="bd-counter-2-number">
-                           <span class="odometer" data-count="14">14</span><span>+</span>
-                        </div>
-                        <div class="bd-counter-2-text">
-                           <span>years of
-                              <br>experience</span>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-lg-4 col-md-10 col-sm-10">
-                  <div class="bd-counter-2 mb-30">
-                     <div class="bd-counter-2-icon">
-                        <i class="flaticon-reading"></i>
-                     </div>
-                     <div class="bd-counter-2-content">
-                        <div class="bd-counter-2-number">
-                           <span class="odometer" data-count="7">7</span><span>K+</span>
-                        </div>
-                        <div class="bd-counter-2-text">
-                           <span>Students
-                              <br>each year</span>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-lg-4 col-md-10 col-sm-10">
-                  <div class="bd-counter-2 mb-30">
-                     <div class="bd-counter-2-icon">
-                        <i class="flaticon-badge"></i>
-                     </div>
-                     <div class="bd-counter-2-content">
-                        <div class="bd-counter-2-number">
-                           <span class="odometer" data-count="15">15</span><span>+</span>
-                        </div>
-                        <div class="bd-counter-2-text">
-                           <span>Award
-                              <br> Wining</span>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </div>
-      <!-- counter area end here  -->
-
-
-      <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
       <!-- newsletter area start here  -->
       <section class="bd-newsletter-area">
          <div class="container">
@@ -829,6 +1107,7 @@
          </div>
       </section>
       <!-- newsletter area end here  -->
+
    </main>
    <!-- main area end here  -->
 
@@ -870,7 +1149,6 @@
                                  <li><a href="#">Shop</a></li>
                                  <li><a href="#">Pages</a></li>
                                  <li><a href="#">Blog</a></li>
-                                 <li><a href="#">Contact</a></li>
                               </ul>
                            </div>
                         </div>
@@ -879,15 +1157,14 @@
                   <div class="col-lg-3 col-md-6 col-sm-6">
                      <div class="bd-footer-widget bd-footer-widget-3 mb-50">
                         <div class="bd-footer-widget-content">
-                           <h4 class="bd-footer-widget-title mb-30">Programs</h4>
+                           <h4 class="bd-footer-widget-title mb-30">Customer Service</h4>
                            <div class="bd-footer-list">
                               <ul>
-                                 <li><a href="#">Play School</a></li>
-                                 <li><a href="#">Nursery</a></li>
-                                 <li><a href="#">Junior Kg</a></li>
+                                 <li><a href="#">Recently Viewed</a></li>
+                                 <li><a href="#">New Products</a></li>
+                                 <li><a href="#">Shipping & Returns</a></li>
                                  <li><a href="#">Senior Kg</a></li>
-                                 <li><a href="#">Holiday Camp</a></li>
-                                 <li><a href="#">Day Care</a></li>
+                                 <li><a href="#">Become a Seller</a></li>
                               </ul>
                            </div>
                         </div>
@@ -911,9 +1188,9 @@
                </div>
             </div>
          </div>
-         <div class="bd-footer-copyright pb-5">
+         <div class="bd-footer-copyright pb-10">
             <div class="bd-footer-copyright-line pb-20">
-               <img src="{{asset('admin-assets/img/shape/wave-line.png')}}" alt="bottom line">
+               <img src="{{asset('admin-assets/img/shape/line-bottom-shape.png')}}" alt="bottom line not found">
             </div>
             <div class="container">
                <div class="bd-footer-copyright-wrap d-flex align-items-md-center justify-content-center">
@@ -1004,6 +1281,143 @@
    <!-- offcanvas area end -->
 
 
+   <!-- product view modal start -->
+   <div class="modal bd-shop-modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+         <div class="modal-content">
+            <div class="modal-header">
+               <h5 class="modal-title d-none" id="exampleModalLabel">Modal title</h5>
+               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+               <div class="container">
+                  <div class="row">
+                     <div class="col-lg-6">
+                        <div class="product-d-img-tab-wrapper mb-60">
+                           <div class="product-d-img-nav">
+                              <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                 <li class="nav-item" role="presentation">
+                                    <button class="nav-link active" id="pro-1-tab" data-bs-toggle="tab" data-bs-target="#pro-1" type="button" role="tab" aria-controls="pro-1" aria-selected="false">
+                                       <img src="{{asset('admin-assets/img/shop/tab-1.jpg')}}" alt="img not found">
+                                    </button>
+                                 </li>
+                                 <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="pro-2-tab" data-bs-toggle="tab" data-bs-target="#pro-2" type="button" role="tab" aria-controls="pro-2" aria-selected="true">
+                                       <img src="{{asset('admin-assets/img/shop/tab-2.jpg')}}" alt="img not found">
+                                    </button>
+                                 </li>
+                                 <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="pro-3-tab" data-bs-toggle="tab" data-bs-target="#pro-3" type="button" role="tab" aria-controls="pro-3" aria-selected="false">
+                                       <img src="{{asset('admin-assets/img/shop/tab-3.jpg')}}" alt="img not found">
+                                    </button>
+                                 </li>
+                                 <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="pro-4-tab" data-bs-toggle="tab" data-bs-target="#pro-4" type="button" role="tab" aria-controls="pro-4" aria-selected="false">
+                                       <img src="{{asset('admin-assets/img/shop/tab-4.jpg')}}" alt="img not found">
+                                    </button>
+                                 </li>
+                              </ul>
+                           </div>
+                           <div class="product-d-img-tab">
+                              <div class="tab-content" id="productDetailsTab">
+                                 <div class="tab-pane fade active show" id="pro-1" role="tabpanel" aria-labelledby="pro-1-tab">
+                                    <img class="active" src="{{asset('admin-assets/img/shop/9.2.jpg')}}" alt="img not found">
+                                 </div>
+                                 <div class="tab-pane fade" id="pro-2" role="tabpanel" aria-labelledby="pro-2-tab">
+                                    <img class="active" src="{{asset('admin-assets/img/shop/9.1.jpg')}}" alt="img not found">
+                                 </div>
+                                 <div class="tab-pane fade" id="pro-3" role="tabpanel" aria-labelledby="pro-3-tab">
+                                    <img class="active" src="{{asset('admin-assets/img/shop/8.1.jpg')}}" alt="img not found">
+                                 </div>
+                                 <div class="tab-pane fade" id="pro-4" role="tabpanel" aria-labelledby="pro-4-tab">
+                                    <img class="active" src="{{asset('admin-assets/img/shop/8.3.png')}}" alt="img not found">
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-lg-6">
+                        <div class="product-side-info mb-60">
+                           <div class="product-category-review">
+                              <div class="product-d-category">Organic, Food</div>
+                              <div class="product-d-review">
+                                 <div class="rating">
+                                    <a href="#"><i class="fas fa-star"></i></a>
+                                    <a href="#"><i class="fas fa-star"></i></a>
+                                    <a href="#"><i class="fas fa-star"></i></a>
+                                    <a href="#"><i class="fas fa-star"></i></a>
+                                    <a href="#"><i class="far fa-star"></i></a>
+                                 </div>
+                                 <span>10 Reviews</span>
+                              </div>
+                           </div>
+                           <h4 class="product-name">baby shoes</h4>
+                           <div class="product-price">
+                              <span class="price-old">$63.00</span>
+                              <span class="price-now">$59.00</span>
+                           </div>
+
+                           <p class="mb-30">
+                              Kindedo seemed great for my kindergartener-to-be, a full santa believer. Not so the winter
+                              holiday
+                              episode, and I'm not sure how I'm going to police. I really happy to see my child there
+                           </p>
+                           <div class="product-quantity-cart mb-30">
+                              <div class="product-quantity-form">
+                                 <form action="#">
+                                    <button class="cart-minus">
+                                       <i class="far fa-minus"></i>
+                                    </button>
+                                    <input class="cart-input" type="text" value="1">
+                                    <button class="cart-plus">
+                                       <i class="far fa-plus"></i>
+                                    </button>
+                                 </form>
+                              </div>
+                              <a href="cart.html" class="bd-cart-btn"><i class="fas fa-shopping-basket"></i>Add to
+                                 Cart</a>
+                           </div>
+                           <div class="product-d-meta sku mb-10">
+                              <span>SKU:</span>
+                              <span>BO1D0MX8SJ</span>
+                           </div>
+                           <div class="product-d-meta ockcategories mb-10">
+                              <span>Categories:</span>
+                              <span>Garden, Flower, Leaf</span>
+                           </div>
+                           <div class="product-d-meta tags mb-10">
+                              <span>Tags:</span>
+                              <span>Vegetable, Flower, Leaf</span>
+                           </div>
+                           <div class="product-d-meta share mb-10">
+                              <span>Share:</span>
+                              <div class="social-links">
+                                 <ul>
+                                    <li>
+                                       <a href="#"><i class="fab fa-twitter"></i></a>
+                                    </li>
+                                    <li>
+                                       <a href="#"><i class="fab fa-behance"></i></a>
+                                    </li>
+                                    <li>
+                                       <a href="#"><i class="fab fa-youtube"></i></a>
+                                    </li>
+                                    <li>
+                                       <a href="#"><i class="fab fa-linkedin"></i></a>
+                                    </li>
+                                 </ul>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <!-- product view modal end -->
+
    <!-- serach popup area start here  -->
    <div class="bd-search-popup-area">
       <div class="container">
@@ -1056,6 +1470,6 @@
 </body>
 
 
-<!-- Mirrored from codeskdhaka.com/html/kindedo-prev/kindedo/about.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 04 May 2023 08:04:17 GMT -->
+<!-- Mirrored from codeskdhaka.com/html/kindedo-prev/kindedo/index-3.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 04 May 2023 08:03:52 GMT -->
 
 </html>
