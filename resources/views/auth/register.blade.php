@@ -2,7 +2,7 @@
     <x-auth-card>
         <x-slot name="logo">
             <a href="/">
-                <x-application-logo class="w-20 h-20 fill-current text-gray-500" />
+                    <img src="{{asset('admin-assets/img/bg/preloader.png')}}" alt="img not found!">
             </a>
         </x-slot>
 
@@ -25,6 +25,14 @@
 
                 <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required />
             </div>
+
+
+              <!-- Budget -->
+              <div class="mt-4">
+                  <x-label for="budget" :value="__('Budget')" />
+
+                  <x-input id="budget" class="block mt-1 w-full" type="number" name="budget" :value="old('budget')" required />
+              </div>
 
             <!-- Password -->
             <div class="mt-4">
