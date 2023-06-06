@@ -1,4 +1,4 @@
-@extends('admin.layouts.layout-admin')
+@extends('admin.layouts.layout-customer')
 @section('title', 'Shop Details')
 @section('content')
 <!-- breadcrumb area start here -->
@@ -371,7 +371,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                
+
                                         </form>
                                     </div>
                                 </div>
