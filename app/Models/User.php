@@ -42,4 +42,15 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function book(){
+                return $this->belongsToMany(
+                    Book::class,
+                    'post_tag',
+                    'user_id',
+                    'book_id',
+                    'id',
+                    'id'
+                );
+            }
 }
