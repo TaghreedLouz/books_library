@@ -20,12 +20,23 @@ Route::get('/', function () {
 
 
 Route::get('/index', function () {
-    return view('w');
+    return view('admin.index');
 });
 
+Route::get('/index/about', function () {
+    return view('admin.about');
+});
+
+Route::get('/index/contact', function () {
+    return view('admin.contactus');
+});
 Route::get('/admin/books/index', 'Admin\BookController@index');
 
 
+    //عرض الفورم فقط
+    Route::get('admin/create', 'Admin\BookController@create');
+    //ارسال البيانات في الفورم من action
+    Route::post('posts/store', 'Admin\BookController@store')->name('admin.books.store');
 
 
 Route::get('/dashboard', function () {
@@ -33,3 +44,4 @@ Route::get('/dashboard', function () {
 })->middleware(['auth'])->name('dashboard');
 
 require __DIR__ . '/auth.php';
+
