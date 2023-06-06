@@ -1,567 +1,445 @@
-<!doctype html>
-<html class="no-js" lang="zxx">
-
-
-<!-- Mirrored from codeskdhaka.com/html/kindedo-prev/kindedo/about.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 04 May 2023 08:04:16 GMT -->
+<!DOCTYPE html>
+<html lang="en">
+<!--begin::Head-->
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title> @yield('title')</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- Place favicon.ico in the root directory -->
-    <link rel="shortcut icon" type="image/x-icon" href="{{asset('admin-assets/img/logo/favicon.png')}}">
-
-    <!-- CSS here -->
-    <link rel="stylesheet" href="{{asset('admin-assets/css/bootstrap.css')}}">
-    <link rel="stylesheet" href="{{asset('admin-assets/css/meanmenu.css')}}">
-    <link rel="stylesheet" href="{{asset('admin-assets/css/animate.min.css')}}">
-    <link rel="stylesheet" href="{{asset('admin-assets/css/swiper-bundle.css')}}">
-    <link rel="stylesheet" href="{{asset('admin-assets/css/slick.css')}}">
-    <link rel="stylesheet" href="{{asset('admin-assets/css/nouislider.css')}}">
-    <link rel="stylesheet" href="{{asset('admin-assets/css/backtotop.css')}}">
-    <link rel="stylesheet" href="{{asset('admin-assets/css/magnific-popup.css')}}">
-    <link rel="stylesheet" href="{{asset('admin-assets/css/nice-select.css')}}">
-    <link rel="stylesheet" href="{{asset('admin-assets/css/flaticon_kindedo.css')}}">
-    <link rel="stylesheet" href="{{asset('admin-assets/css/font-awesome-pro.css')}}">
-    <link rel="stylesheet" href="{{asset('admin-assets/css/odometer.css')}}">
-    <link rel="stylesheet" href="{{asset('admin-assets/css/spacing.css')}}">
-    <link rel="stylesheet" href="{{asset('admin-assets/css/main.css')}}">
+    <base href="../../">
+    <meta charset="utf-8" />
+    <title>@yield('title')</title>
+    <meta name="description" content="Page with empty content" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link rel="canonical" href="https://keenthemes.com/metronic" />
+    <!--begin::Fonts-->
+    <link href='https://fonts.googleapis.com/css?family=Noto Kufi Arabic' rel='stylesheet'>
+    <!--end::Fonts-->
+    <!--begin::Page Vendors Styles(used by this page)-->
+    <link href="{{asset('admin-assets/plugins/custom/fullcalendar/fullcalendar.bundle.rtl.css')}}" rel="stylesheet"
+        type="text/css" />
+    <!--end::Page Vendors Styles-->
+    <!--begin::Global Theme Styles(used by all pages)-->
+    <link href="{{asset('admin-assets/plugins/global/plugins.bundle.rtl.css')}}" rel="stylesheet" type="text/css" />
+    <link href="{{asset('admin-assets/plugins/custom/prismjs/prismjs.bundle.rtl.css')}}" rel="stylesheet"
+        type="text/css" />
+    <link href="{{asset('admin-assets/css/style.bundle.rtl.css')}}" rel="stylesheet" type="text/css" />
+    <!--end::Global Theme Styles-->
+    <!--begin::Layout Themes(used by all pages)-->
+    <link href="{{asset('admin-assets/css/themes/layout/header/base/light.rtl.css')}}" rel="stylesheet"
+        type="text/css" />
+    <link href="{{asset('admin-assets/css/themes/layout/header/menu/light.rtl.css')}}" rel="stylesheet"
+        type="text/css" />
+    <link href="{{asset('admin-assets/css/themes/layout/brand/dark.rtl.css')}}" rel="stylesheet" type="text/css" />
+    <link href="{{asset('admin-assets/css/themes/layout/aside/dark.css')}}" rel="stylesheet" type="text/css" />
+    <!--end::Layout Themes-->
+    <link rel="shortcut icon" href="{{asset('admin-assets/media/logos/favicon.ico')}}" />
+    <style>
+    body {
+        font-family: 'Noto Kufi Arabic';
+        font-size: 22px;
+    }
+    </style>
 </head>
+<!--end::Head-->
+<!--begin::Body-->
 
-<body>
-
-    <!-- pre loader area start -->
-    <div id="loading">
-        <div id="preloader">
-            <div class="preloader-thumb-wrap">
-                <div class="preloader-thumb">
-                    <div class="preloader-border"></div>
-                    <img src="{{asset('admin-assets/img/bg/preloader.png')}}" alt="img not found!">
-                </div>
-            </div>
+<body direction="rtl" dir="rtl" style="direction: rtl" id="kt_body"
+    class="header-fixed header-mobile-fixed subheader-enabled subheader-fixed aside-enabled aside-fixed aside-minimize-hoverable page-loading">
+    <!--begin::Main-->
+    <!--begin::Header Mobile-->
+    <div id="kt_header_mobile" class="header-mobile align-items-center header-mobile-fixed">
+        <!--begin::Logo-->
+        <a href="index.html">
+            <img alt="Logo" src="{{asset('admin-assets/media/logos/logo-light.png')}}" />
+        </a>
+        <!--end::Logo-->
+        <!--begin::Toolbar-->
+        <div class="d-flex align-items-center">
+            <!--begin::Aside Mobile Toggle-->
+            <button class="btn p-0 burger-icon burger-icon-left" id="kt_aside_mobile_toggle">
+                <span></span>
+            </button>
+            <!--end::Aside Mobile Toggle-->
+            <!--begin::Topbar Mobile Toggle-->
+            <button class="btn btn-hover-text-primary p-0 ml-2" id="kt_header_mobile_topbar_toggle">
+                <span class="svg-icon svg-icon-xl">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px"
+                        height="24px" viewBox="0 0 24 24" version="1.1">
+                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                            <polygon points="0 0 24 0 24 24 0 24" />
+                            <path
+                                d="M12,11 C9.790861,11 8,9.209139 8,7 C8,4.790861 9.790861,3 12,3 C14.209139,3 16,4.790861 16,7 C16,9.209139 14.209139,11 12,11 Z"
+                                fill="#000000" fill-rule="nonzero" opacity="0.3" />
+                            <path
+                                d="M3.00065168,20.1992055 C3.38825852,15.4265159 7.26191235,13 11.9833413,13 C16.7712164,13 20.7048837,15.2931929 20.9979143,20.2 C21.0095879,20.3954741 20.9979143,21 20.2466999,21 C16.541124,21 11.0347247,21 3.72750223,21 C3.47671215,21 2.97953825,20.45918 3.00065168,20.1992055 Z"
+                                fill="#000000" fill-rule="nonzero" />
+                        </g>
+                    </svg>
+                    <!--end::Svg Icon-->
+                </span>
+            </button>
+            <!--end::Topbar Mobile Toggle-->
         </div>
+        <!--end::Toolbar-->
     </div>
-    <!-- pre loader area end -->
-
-    <!-- back to top start -->
-    <div class="progress-wrap">
-        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
-            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
-        </svg>
-    </div>
-    <!-- back to top end -->
-
-    <!-- header area start -->
-    <header>
-        <div class="bd-header">
-            <!-- header top area start  -->
-            <div class="bd-header-top d-none d-lg-block p-relative">
-                <div class="bd-header-top-bg"></div>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="bd-header-top-wrapper d-flex justify-content-between">
-                                <div class="bd-header-top-left">
-                                    <div class="bd-header-meta-items d-flex align-items-center">
-                                        <div class="bd-header-meta-item d-flex align-items-center">
-                                            <div class="bd-header-meta-icon">
-                                                <i class="fas fa-envelope"></i>
-                                            </div>
-                                            <div class="bd-header-meta-text">
-                                                <p><a href="mailto:support@kindedo.com">support@kindedo.com</a></p>
-                                            </div>
-                                        </div>
-                                        <div class="bd-header-meta-item d-flex align-items-center">
-                                            <div class="bd-header-meta-icon">
-                                                <i class="fas fa-clock"></i>
-                                            </div>
-                                            <div class="bd-header-meta-text">
-                                                <p>8.00am-4.00pm</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="bd-header-top-right d-flex align-items-center">
-                                    <div class="bd-header-meta-items">
-                                        <div class="bd-header-meta-item d-flex align-items-center">
-                                            <div class="bd-header-meta-icon">
-                                                <i class="fas fa-map-marker-alt"></i>
-                                            </div>
-                                            <div class="bd-header-meta-text">
-                                                <p><a href="#">14/A, Kilix Home Tower, NYC</a></p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+    <!--end::Header Mobile-->
+    <div class="d-flex flex-column flex-root">
+        <!--begin::Page-->
+        <div class="d-flex flex-row flex-column-fluid page">
+            <!--begin::Aside-->
+            <div class="aside aside-left aside-fixed d-flex flex-column flex-row-auto" id="kt_aside">
+                <!--begin::Brand-->
+                <div class="brand flex-column-auto" id="kt_brand">
+                    <!--begin::Logo-->
+                    <a href="index.html" class="brand-logo">
+                        <img alt="Logo" src="{{asset('admin-assets/media/logos/logo-light.png')}}" />
+                    </a>
+                    <!--end::Logo-->
+                    <!--begin::Toggle-->
+                    <button class="brand-toggle btn btn-sm px-0" id="kt_aside_toggle">
+                        <span class="svg-icon svg-icon svg-icon-xl">
+                            <!--begin::Svg Icon | path:{{asset('admin-assets/media/svg/icons/Navigation/Angle-double-left.svg')}}-->
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                    <polygon points="0 0 24 0 24 24 0 24" />
+                                    <path
+                                        d="M5.29288961,6.70710318 C4.90236532,6.31657888 4.90236532,5.68341391 5.29288961,5.29288961 C5.68341391,4.90236532 6.31657888,4.90236532 6.70710318,5.29288961 L12.7071032,11.2928896 C13.0856821,11.6714686 13.0989277,12.281055 12.7371505,12.675721 L7.23715054,18.675721 C6.86395813,19.08284 6.23139076,19.1103429 5.82427177,18.7371505 C5.41715278,18.3639581 5.38964985,17.7313908 5.76284226,17.3242718 L10.6158586,12.0300721 L5.29288961,6.70710318 Z"
+                                        fill="#000000" fill-rule="nonzero"
+                                        transform="translate(8.999997, 11.999999) scale(-1, 1) translate(-8.999997, -11.999999)" />
+                                    <path
+                                        d="M10.7071009,15.7071068 C10.3165766,16.0976311 9.68341162,16.0976311 9.29288733,15.7071068 C8.90236304,15.3165825 8.90236304,14.6834175 9.29288733,14.2928932 L15.2928873,8.29289322 C15.6714663,7.91431428 16.2810527,7.90106866 16.6757187,8.26284586 L22.6757187,13.7628459 C23.0828377,14.1360383 23.1103407,14.7686056 22.7371482,15.1757246 C22.3639558,15.5828436 21.7313885,15.6103465 21.3242695,15.2371541 L16.0300699,10.3841378 L10.7071009,15.7071068 Z"
+                                        fill="#000000" fill-rule="nonzero" opacity="0.3"
+                                        transform="translate(15.999997, 11.999999) scale(-1, 1) rotate(-270.000000) translate(-15.999997, -11.999999)" />
+                                </g>
+                            </svg>
+                            <!--end::Svg Icon-->
+                        </span>
+                    </button>
+                    <!--end::Toolbar-->
                 </div>
-            </div>
-            <!-- header top area end -->
-
-            <!-- header bottom area start -->
-            <div id="header-sticky" class="bd-header-bottom ">
-                <div class="container">
-                    <div class="mega-menu-wrapper p-relative">
-                        <div class="d-flex align-items-center justify-content-between">
-                            <div class="bd-header-logo">
-                                <a href="index.html">
-                                    <img src="{{asset('admin-assets/img/logo/logo.svg')}}" alt="logo">
+                <!--end::Brand-->
+                <!--begin::Aside Menu-->
+                <div class="aside-menu-wrapper flex-column-fluid" id="kt_aside_menu_wrapper">
+                    <!--begin::Menu Container-->
+                    <div id="kt_aside_menu" class="aside-menu my-4" data-menu-vertical="1" data-menu-scroll="1"
+                        data-menu-dropdown-timeout="500">
+                        <!--begin::Menu Nav-->
+                        <ul class="menu-nav">
+                            <li class="menu-item" aria-haspopup="true">
+                                <a href="index.html" class="menu-link">
+                                    <i class="menu-icon flaticon-home"></i>
+                                    <span class="menu-text">Dashboard</span>
                                 </a>
-                            </div>
-                            <div class="bd-main-menu d-none d-lg-flex align-items-center">
-                                <nav id="mobile-menu">
-                                    <ul>
-                                        <li class="has-dropdown">
-                                            <a href="index.html">Home</a>
-                                            <ul class="submenu submenu-2">
-                                                <li><a href="index.html">Home Style 1</a></li>
-                                                <li><a href="index-2.html">Home Style 2</a>
-                                                </li>
-                                                <li><a href="index-3.html">Home Style 3</a></li>
-                                            </ul>
+                            </li>
+                            <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
+                                <a href="javascript:;" class="menu-link menu-toggle">
+                                    <i class="menu-icon flaticon-web"></i>
+                                    <span class="menu-text">Applications</span>
+                                    <i class="menu-arrow"></i>
+                                </a>
+                                <div class="menu-submenu">
+                                    <i class="menu-arrow"></i>
+                                    <ul class="menu-subnav">
+                                        <li class="menu-item menu-item-parent" aria-haspopup="true">
+                                            <span class="menu-link">
+                                                <span class="menu-text">Applications</span>
+                                            </span>
                                         </li>
-                                        <li>
-                                            <a href="about.html">About</a>
-                                        </li>
-                                        <li class="has-dropdown has-mega-menu">
-                                            <a href="programs.html">Programs</a>
-                                            <ul class="mega-menu mega-menu-2 clr-2">
-                                                <li>
-                                                    <a href="javascript:void(0);" class="d-lg-none">List 1</a>
-                                                    <ul>
-                                                        <li> <a href="program-details.html" class="mega-program">
-                                                                <div class="mega-menu-2-inner-num"><span>01</span></div>
-                                                                <div class="mega-menu-2-inner-title">
-                                                                    <h6>Settling</h6>
-                                                                    <span>4-5 Yrs</span>
-                                                                </div>
-                                                            </a></li>
-                                                        <li> <a href="program-details.html" class="mega-program">
-                                                                <div class="mega-menu-2-inner-num"><span>02</span></div>
-                                                                <div class="mega-menu-2-inner-title">
-                                                                    <h6>Play Group</h6>
-                                                                    <span>4-5 Yrs</span>
-                                                                </div>
-                                                            </a></li>
-                                                        <li> <a href="program-details.html" class="mega-program">
-                                                                <div class="mega-menu-2-inner-num"><span>03</span></div>
-                                                                <div class="mega-menu-2-inner-title">
-                                                                    <h6>Play Group</h6>
-                                                                    <span>5-6 Yrs</span>
-                                                                </div>
-                                                            </a></li>
-                                                    </ul>
-                                                </li>
-                                                <li>
-                                                    <a href="javascript:void(0);" class="d-lg-none">List 2</a>
-                                                    <ul>
-                                                        <li> <a href="program-details.html" class="mega-program">
-                                                                <div class="mega-menu-2-inner-num"><span>04</span></div>
-                                                                <div class="mega-menu-2-inner-title">
-                                                                    <h6>Nuesery</h6>
-                                                                    <span>4-5 Yrs</span>
-                                                                </div>
-                                                            </a></li>
-                                                        <li> <a href="program-details.html" class="mega-program">
-                                                                <div class="mega-menu-2-inner-num"><span>05</span></div>
-                                                                <div class="mega-menu-2-inner-title">
-                                                                    <h6>Junior Kg</h6>
-                                                                    <span>4-5 Yrs</span>
-                                                                </div>
-                                                            </a></li>
-                                                        <li> <a href="program-details.html" class="mega-program">
-                                                                <div class="mega-menu-2-inner-num"><span>06</span></div>
-                                                                <div class="mega-menu-2-inner-title">
-                                                                    <h6>Senior Kg</h6>
-                                                                    <span>6-7 Yrs</span>
-                                                                </div>
-                                                            </a></li>
-                                                    </ul>
-                                                </li>
-                                                <li class="test">
-                                                    <a href="javascript:void(0);" class="d-lg-none">list 3</a>
-                                                    <ul>
-                                                        <li>
-                                                            <div class="mega-menu-2-inner-thumb p-relative">
-                                                                <img src="{{asset('admin-assets/img/logo/mega-menu-1.png')}}" alt="img not found!">
-                                                                <div class="mega-menu-2-inner-thumb-content">
-                                                                    <h4>Join New Program</h4>
-                                                                    <div class="mega-menu-2-inner-thumb-btn mb-25">
-                                                                        <a href="programs.html" class="mega-btn">View More</a>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li class="has-dropdown">
-                                            <a href="shop.html">Shop</a>
-                                            <ul class="submenu submenu-2">
-                                                <li><a href="shop.html">Shop Main</a></li>
-                                                <li><a href="shop-details.html">Shop Details</a></li>
-                                                <li><a href="wishlist.html">Wishlist</a></li>
-                                                <li><a href="cart.html">Cart</a></li>
-                                                <li><a href="checkout.html">Checkout</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="has-dropdown has-mega-menu">
-                                            <a href="#">Pages</a>
-                                            <ul class="mega-menu clr-2">
-                                                <li><a href="javasript:void(0);" class="mega-menu-title">Page Layout 1</a>
-                                                    <ul>
-                                                        <li> <a href="programs.html">Program</a></li>
-                                                        <li><a href="program-details.html">Program Details</a></li>
-                                                        <li><a href="teacher.html">Teacher</a></li>
-                                                        <li><a href="teacher-details.html">Teacher Details</a></li>
-                                                        <li><a href="time-table.html">Time Table</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li><a href="javasript:void(0);" class="mega-menu-title">Page Layout 2</a>
-                                                    <ul>
-                                                        <li><a href="testimonial.html">Testimonial</a></li>
-                                                        <li><a href="gallery.html">Gallery</a></li>
-                                                        <li><a href="faq.html">FAQ</a></li>
-                                                        <li><a href="classes.html">Class</a></li>
-                                                        <li><a href="class-details.html">Class Details</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li><a href="javasript:void(0);" class="mega-menu-title">Page Layout 3</a>
-                                                    <ul>
-                                                        <li><a href="news.html">News Main</a></li>
-                                                        <li><a href="news-sidebar.html">News Sidebar</a></li>
-                                                        <li><a href="error-404.html">Error Page</a></li>
-                                                        <li><a href="news-classic.html">News Classic</a></li>
-                                                        <li><a href="news-details.html">News Details</a></li>
-                                                    </ul>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li class="has-dropdown">
-                                            <a href="news.html">News</a>
-                                            <ul class="submenu submenu-2">
-                                                <li><a href="news.html">News Default</a></li>
-                                                <li><a href="news-sidebar.html">News Sidebar</a></li>
-                                                <li><a href="news-classic.html">News Classic</a></li>
-                                                <li><a href="news-details.html">News Details</a></li>
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            <a href="contact.html">Contact</a>
-                                        </li>
-                                    </ul>
-                                </nav>
-                                <div class="bd-search-btn-wrapper">
-                                    <button class="bd-search-open-btn">
-                                        <i class="flaticon-search"></i>
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="bd-header-bottom-right d-flex justify-content-end align-items-center">
-                                <div class="bd-header-meta-item d-none bd-header-menu-meta d-xxl-flex align-items-center">
-                                    <div class="bd-header-meta-icon">
-                                        <i class="flaticon-phone-call"></i>
-                                    </div>
-                                    <div class="bd-header-meta-text">
-                                        <p><a href="tel:9072003462">907-200-3462</a></p>
-                                    </div>
-                                </div>
-                                <div class="bd-header-btn d-none d-xl-block">
-                                    <a href="contact.html" class="bd-btn">
-                                        <span class="bd-btn-inner">
-                                            <span class="bd-btn-normal">Apply now</span>
-                                            <span class="bd-btn-hover">Apply now</span>
-                                        </span>
-                                    </a>
-                                </div>
-                                <div class="header-hamburger">
-                                    <button type="button" class="hamburger-btn offcanvas-open-btn">
-                                        <span></span>
-                                        <span></span>
-                                        <span></span>
-                                        <span></span>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- header bottom area end -->
-        </div>
-    </header>
-    <!-- header area end here -->
-
-    <!-- main area start here  -->
-    <main>
-
-        @yield('content')
-
-        <!-- newsletter area start here  -->
-        <section class="bd-newsletter-area">
-            <div class="container">
-                <div class="bd-newsletter pt-100 pb-100 theme-bg">
-                    <div class="bd-newsletter-bg" data-background="{{asset('admin-assets/img/bg/newsletter-bg.jpg')}}"></div>
-                    <div class="row justify-content-center">
-                        <div class="col-xl-8 col-lg-10">
-                            <div class="bd-newsletter-content">
-                                <div class="bd-section-title-wrapper text-center is-white mb-45">
-                                    <h2 class="bd-section-title mb-0">Join Our Newsletter</h2>
-                                    <p>Subscribe our newsletter to get our latest update & news.</p>
-                                </div>
-                                <div class="bd-newsletter-form">
-                                    <form action="#">
-                                        <div class="bd-newsletter-input">
-                                            <input type="text" placeholder="your email">
-                                            <button type="submit" class="bd-btn">
-                                                <span class="bd-btn-inner">
-                                                    <span class="bd-btn-normal"><i class="fa-sharp fa-solid fa-paper-plane"></i>Subscribe now</span>
-                                                    <span class="bd-btn-hover"><i class="fa-sharp fa-solid fa-paper-plane"></i>Subscribe now</span>
+                                        <li class="menu-item" aria-haspopup="true">
+                                            <a href="custom/apps/inbox.html" class="menu-link">
+                                                <i class="menu-bullet menu-bullet-line">
+                                                    <span></span>
+                                                </i>
+                                                <span class="menu-text">Inbox</span>
+                                                <span class="menu-label">
+                                                    <span class="label label-danger label-inline">new</span>
                                                 </span>
-                                            </button>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- newsletter area end here  -->
-    </main>
-    <!-- main area end here  -->
-
-    <!-- footer area start -->
-    <footer>
-        <div class="bd-footer-area pt-200">
-            <!-- footer area bg here  -->
-            <div class="bd-gradient-bg"></div>
-            <div class="bd-footer pt-90 pb-25">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-3 col-md-6 col-sm-6">
-                            <div class="bd-footer-widget bd-footer-widget-1 mb-50">
-                                <div class="bd-footer-logo mb-35">
-                                    <a href="index.html"> <img src="{{asset('admin-assets/img/logo/logo.svg')}}" alt="img not found!"></a>
-                                </div>
-                                <div class="bd-footer-widget-content mb-40">
-                                    <p>In our Adult Participation programs, for most students, it is their first program in
-                                        Kindedo. </p>
-                                </div>
-                                <div class="bd-footer-bottom-social pb-20">
-                                    <ul>
-                                        <li><a target="_blank" href="https://www.facebook.com/"><i class="fa-brands fa-facebook-f"></i></a></li>
-                                        <li><a target="_blank" href="https://twitter.com/"><i class="fa-brands fa-twitter"></i></a></li>
-                                        <li><a target="_blank" href="https://www.youtube.com/"><i class="fa-brands fa-youtube"></i></a>
+                                            </a>
                                         </li>
                                     </ul>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6 col-sm-6">
-                            <div class="bd-footer-widget bd-footer-widget-2 mb-50">
-                                <div class="bd-footer-widget-content">
-                                    <h4 class="bd-footer-widget-title mb-30">Quick links</h4>
-                                    <div class="bd-footer-list">
-                                        <ul>
-                                            <li><a href="#">About</a></li>
-                                            <li><a href="#">Courses</a></li>
-                                            <li><a href="#">Shop</a></li>
-                                            <li><a href="#">Pages</a></li>
-                                            <li><a href="#">Blog</a></li>
-                                            <li><a href="#">Contact</a></li>
-                                        </ul>
-                                    </div>
+                            </li>
+                            <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
+                                <a href="javascript:;" class="menu-link menu-toggle">
+                                    <i class="menu-icon flaticon-tabs"></i>
+                                    <span class="menu-text">Pages</span>
+                                    <i class="menu-arrow"></i>
+                                </a>
+                                <div class="menu-submenu">
+                                    <i class="menu-arrow"></i>
+                                    <ul class="menu-subnav">
+                                        <li class="menu-item menu-item-parent" aria-haspopup="true">
+                                            <span class="menu-link">
+                                                <span class="menu-text">Pages</span>
+                                            </span>
+                                        </li>
+                                        <li class="menu-item" aria-haspopup="true">
+                                            <a href="custom/apps/inbox.html" class="menu-link">
+                                                <i class="menu-bullet menu-bullet-line">
+                                                    <span></span>
+                                                </i>
+                                                <span class="menu-text">Inbox</span>
+                                                <span class="menu-label">
+                                                    <span class="label label-danger label-inline">new</span>
+                                                </span>
+                                            </a>
+                                        </li>
+                                    </ul>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6 col-sm-6">
-                            <div class="bd-footer-widget bd-footer-widget-3 mb-50">
-                                <div class="bd-footer-widget-content">
-                                    <h4 class="bd-footer-widget-title mb-30">Programs</h4>
-                                    <div class="bd-footer-list">
-                                        <ul>
-                                            <li><a href="#">Play School</a></li>
-                                            <li><a href="#">Nursery</a></li>
-                                            <li><a href="#">Junior Kg</a></li>
-                                            <li><a href="#">Senior Kg</a></li>
-                                            <li><a href="#">Holiday Camp</a></li>
-                                            <li><a href="#">Day Care</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6 col-sm-6">
-                            <div class="bd-footer-widget bd-footer-widget-4">
-                                <div class="bd-footer-widget-content">
-                                    <h4 class="bd-footer-widget-title mb-30">Contact Us</h4>
-                                    <div class="bd-footer-contact">
-                                        <ul>
-                                            <li><i class="fa-light fa-location-dot"></i><a href="#">14/A, Kilix Home Tower,
-                                                    NYC</a></li>
-                                            <li><i class="fa-light fa-phone"></i><a href="tel:9072003462">907-200-3462</a></li>
-                                            <li><i class="fa-light fa-envelope"></i><a href="mailto:support@kindedo.com">Support@kindedo.com</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                            </li>
+                        </ul>
+                        <!--end::Menu Nav-->
                     </div>
+                    <!--end::Menu Container-->
                 </div>
+                <!--end::Aside Menu-->
             </div>
-            <div class="bd-footer-copyright pb-5">
-                <div class="bd-footer-copyright-line pb-20">
-                    <img src="{{asset('admin-assets/img/shape/wave-line.png')}}" alt="bottom line">
-                </div>
-                <div class="container">
-                    <div class="bd-footer-copyright-wrap d-flex align-items-md-center justify-content-center">
-                        <div class="bd-footer-copyright-text pb-20">
-                            <p>Copyrighted by &copy;2023 <a href="https://themeforest.net/user/bdevs/portfolio" rel="nofollow">BDevs</a>
-                            </p>
+            <!--end::Aside-->
+            <!--begin::Wrapper-->
+            <div class="d-flex flex-column flex-row-fluid wrapper" id="kt_wrapper">
+                <!--begin::Header-->
+                <div id="kt_header" class="header header-fixed" style="background-color: white">
+                    <!--begin::Container-->
+                    <div class="container-fluid d-flex align-items-stretch justify-content-between">
+                        <!--begin::Header Menu Wrapper-->
+                        <div class="header-menu-wrapper header-menu-wrapper-left" id="kt_header_menu_wrapper"></div>
+                        <!--end::Header Menu Wrapper-->
+                        <!--begin::Topbar-->
+                        <div class="topbar">
+                            <!--begin::Languages-->
+                            <div class="dropdown">
+                                <!--begin::Toggle-->
+                                <div class="topbar-item" data-toggle="dropdown" data-offset="10px,0px">
+                                    <div class="topbar-item">
+                                        <div
+                                            class="btn btn-icon btn-icon-mobile w-auto btn-clean d-flex align-items-center btn-lg px-2">
+                                            <span
+                                                class="text-muted font-weight-bold font-size-base d-none d-md-inline mr-1">Hi,</span>
+                                            <span
+                                                class="text-dark-50 font-weight-bolder font-size-base d-none d-md-inline mr-3">Sean</span>
+                                            <span class="symbol symbol-lg-35 symbol-25 symbol-light-success">
+                                                <span class="symbol-label font-size-h5 font-weight-bold">S</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--end::Toggle-->
+                                <!--begin::Dropdown-->
+                                <div
+                                    class="dropdown-menu p-0 m-0 dropdown-menu-anim-up dropdown-menu-sm dropdown-menu-right">
+                                    <!--begin::Nav-->
+                                    <ul class="navi navi-hover py-4">
+                                        <!--begin::Item-->
+                                        <li class="navi-item">
+                                            <a href="#" class="navi-link">
+                                                <span class="symbol symbol-20 mr-3">
+                                                    <img src="{{asset('admin-assets/media/svg/flags/226-united-states.svg')}}"
+                                                        alt="" />
+                                                </span>
+                                                <span class="navi-text">English</span>
+                                            </a>
+                                        </li>
+                                        <!--end::Item-->
+                                        <!--begin::Item-->
+                                        <li class="navi-item active">
+                                            <a href="#" class="navi-link">
+                                                <span class="symbol symbol-20 mr-3">
+                                                    <img src="{{asset('admin-assets/media/svg/flags/128-spain.svg')}}"
+                                                        alt="" />
+                                                </span>
+                                                <span class="navi-text">Spanish</span>
+                                            </a>
+                                        </li>
+                                        <!--end::Item-->
+                                    </ul>
+                                    <!--end::Nav-->
+                                </div>
+                                <!--end::Dropdown-->
+                            </div>
+                            <!--end::Languages-->
                         </div>
+                        <!--end::Topbar-->
                     </div>
+                    <!--end::Container-->
                 </div>
-            </div>
-        </div>
-    </footer>
-    <!-- footer area end -->
+                <!--end::Header-->
 
-    <!-- offcanvas area start -->
-    <div class="offcanvas__area">
-        <div class="offcanvas__bg"></div>
-        <div class="offcanvas__wrapper">
-            <div class="offcanvas__content">
-                <div class="offcanvas__top mb-40 d-flex justify-content-between align-items-center">
-                    <div class="offcanvas__logo logo">
-                        <a href="index.html">
-                            <img src="{{asset('admin-assets/img/logo/logo.svg')}}" alt="logo">
-                        </a>
+
+                <!--begin::Content-->
+                <div class="content d-flex flex-column flex-column-fluid" id="kt_content">
+                    <!--begin::Entry-->
+                    <div class="d-flex flex-column-fluid">
+                        <!--begin::Container-->
+                        <div class="container">
+                        @if ($errors->any())
+                        <div class="alert alert-custom alert-notice alert-light-danger fade show mb-5"
+                                role="alert">
+                                <div class="alert-text">  @foreach ($errors->all() as $error)
+                                            <li>{{ $error }}</li>
+                                        @endforeach</div>
+                                <div class="alert-close">
+                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                        <span aria-hidden="true">
+                                            <i class="ki ki-close"></i>
+                                        </span>
+                                    </button>
+                                </div>
+                            </div>
+                            @endif
+
+							@if(session('message_flash'))
+                            <div class="alert alert-custom alert-notice alert-light-{{session('alter')}} fade show mb-5"
+                                role="alert">
+                                <div class="alert-text">{{session('message_flash')}}</div>
+                                <div class="alert-close">
+                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                        <span aria-hidden="true">
+                                            <i class="ki ki-close"></i>
+                                        </span>
+                                    </button>
+                                </div>
+                            </div>
+							@endif
+                            @yield('content')
+                        </div>
+                        <!--end::Container-->
                     </div>
-                    <div class="offcanvas__close">
-                        <button class="offcanvas__close-btn">
-                            <i class="fa-thin fa-times"></i>
-                        </button>
+                    <!--end::Entry-->
+                </div>
+                <!--end::Content-->
+
+
+
+
+                <!--begin::Footer-->
+                <div class="footer bg-white py-4 d-flex flex-lg-column" id="kt_footer">
+                    <!--begin::Container-->
+                    <div
+                        class="container-fluid d-flex flex-column flex-md-row align-items-center justify-content-between">
+                        <!--begin::Copyright-->
+                        <div class="text-dark order-2 order-md-1">
+                            <span class="text-muted font-weight-bold mr-2">2020©</span>
+                            <a href="http://keenthemes.com/metronic" target="_blank"
+                                class="text-dark-75 text-hover-primary">Keenthemes</a>
+                        </div>
+                        <!--end::Copyright-->
+                        <!--begin::Nav-->
+                        <div class="nav nav-dark">
+                            <a href="http://keenthemes.com/metronic" target="_blank"
+                                class="nav-link pl-0 pr-5">About</a>
+                            <a href="http://keenthemes.com/metronic" target="_blank" class="nav-link pl-0 pr-5">Team</a>
+                            <a href="http://keenthemes.com/metronic" target="_blank"
+                                class="nav-link pl-0 pr-0">Contact</a>
+                        </div>
+                        <!--end::Nav-->
                     </div>
+                    <!--end::Container-->
                 </div>
-                <div class="offcanvas__search mb-0">
-                    <form action="#">
-                        <button type="submit"><i class="flaticon-search"></i></button>
-                        <input type="text" placeholder="Search here">
-                    </form>
-                </div>
-                <div class="mobile-menu fix mt-40"></div>
-                <div class="offcanvas__about d-none d-lg-block mt-30 mb-30">
-                    <h4>About Kindedo</h4>
-                    <p>With the help of teachers and environment as the third teacher, students
-                        have opportunities to confidently take risks.</p>
-                </div>
-                <div class="offcanvas__contact mt-30 mb-30">
-                    <h4>Contact Info</h4>
-                    <ul>
-                        <li class="d-flex align-items-center gap-2">
-                            <div class="offcanvas__contact-icon">
-                                <a target="_blank" href="https://www.google.com/maps/place/Dhaka/@23.7806207,90.3492859,12z/data=!3m1!4b1!4m5!3m4!1s0x3755b8b087026b81:0x8fa563bbdd5904c2!8m2!3d23.8104753!4d90.4119873">
-                                    <i class="fal fa-map-marker-alt"></i></a>
-                            </div>
-                            <div class="offcanvas__contact-text">
-                                <a target="_blank" href="https://www.google.com/maps/place/Dhaka/@23.7806207,90.3492859,12z/data=!3m1!4b1!4m5!3m4!1s0x3755b8b087026b81:0x8fa563bbdd5904c2!8m2!3d23.8104753!4d90.4119873">12/A,
-                                    Mirnada City Tower, NYC</a>
-                            </div>
-                        </li>
-                        <li class="d-flex align-items-center gap-2">
-                            <div class="offcanvas__contact-icon">
-                                <a href="tel:+088889797697"><i class="far fa-phone"></i></a>
-                            </div>
-                            <div class="offcanvas__contact-text">
-                                <a href="tel:+088889797697">088889797697</a>
-                            </div>
-                        </li>
-                        <li class="d-flex align-items-center gap-2">
-                            <div class="offcanvas__contact-icon">
-                                <a href="mailto:support@gmail.com"><i class="fal fa-envelope"></i></a>
-                            </div>
-                            <div class="offcanvas__contact-text">
-                                <a href="mailto:support@gmail.com">support@mail.com</a>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-                <div class="offcanvas__social">
-                    <ul>
-                        <li><a target="_blank" href="https://www.facebook.com/"><i class="fa-brands fa-facebook-f"></i></a>
-                        </li>
-                        <li><a target="_blank" href="https://twitter.com/"><i class="fa-brands fa-twitter"></i></a></li>
-                        <li><a target="_blank" href="https://www.youtube.com/"><i class="fa-brands fa-youtube"></i></a>
-                        </li>
-                    </ul>
-                </div>
+                <!--end::Footer-->
             </div>
+            <!--end::Wrapper-->
         </div>
+        <!--end::Page-->
     </div>
-    <div class="body-overlay"></div>
-    <!-- offcanvas area end -->
+    <!--end::Main-->
 
-
-    <!-- serach popup area start here  -->
-    <div class="bd-search-popup-area">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="bd-search-popup">
-                        <div class="bd-search-form">
-                            <form action="#">
-                                <div class="bd-search-input">
-                                    <input type="search" placeholder="Type here to serach ...">
-                                    <div class="bd-search-submit">
-                                        <button type="submit"><i class="flaticon-search"></i></button>
-                                    </div>
-                                </div>
-                            </form>
-                            <div class="bd-search-close">
-                                <div class="bd-search-close-btn">
-                                    <button><i class="fa-thin fa-close"></i></button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <!--begin::Scrolltop-->
+    <div id="kt_scrolltop" class="scrolltop">
+        <span class="svg-icon">
+            <!--begin::Svg Icon | path:{{asset('admin-assets/media/svg/icons/Navigation/Up-2.svg')}}-->
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px"
+                height="24px" viewBox="0 0 24 24" version="1.1">
+                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                    <polygon points="0 0 24 0 24 24 0 24" />
+                    <rect fill="#000000" opacity="0.3" x="11" y="10" width="2" height="10" rx="1" />
+                    <path
+                        d="M6.70710678,12.7071068 C6.31658249,13.0976311 5.68341751,13.0976311 5.29289322,12.7071068 C4.90236893,12.3165825 4.90236893,11.6834175 5.29289322,11.2928932 L11.2928932,5.29289322 C11.6714722,4.91431428 12.2810586,4.90106866 12.6757246,5.26284586 L18.6757246,10.7628459 C19.0828436,11.1360383 19.1103465,11.7686056 18.7371541,12.1757246 C18.3639617,12.5828436 17.7313944,12.6103465 17.3242754,12.2371541 L12.0300757,7.38413782 L6.70710678,12.7071068 Z"
+                        fill="#000000" fill-rule="nonzero" />
+                </g>
+            </svg>
+            <!--end::Svg Icon-->
+        </span>
     </div>
-    <!-- search popup overlay  -->
-    <div class="bd-search-overlay"></div>
-    <!-- serach popup area end here  -->
-
-    <!-- JS here -->
-    <script src="{{asset('admin-assets/js/vendor/jquery.js')}}"></script>
-    <script src="{{asset('admin-assets/js/vendor/waypoints.js')}}"></script>
-    <script src="{{asset('admin-assets/js/bootstrap-bundle.js')}}"></script>
-    <script src="{{asset('admin-assets/js/meanmenu.js')}}"></script>
-    <script src="{{asset('admin-assets/js/swiper-bundle.js')}}"></script>
-    <script src="{{asset('admin-assets/js/slick.js')}}"></script>
-    <script src="{{asset('admin-assets/js/nouislider.js')}}"></script>
-    <script src="{{asset('admin-assets/js/magnific-popup.js')}}"></script>
-    <script src="{{asset('admin-assets/js/parallax.js')}}"></script>
-    <script src="{{asset('admin-assets/js/backtotop.js')}}"></script>
-    <script src="{{asset('admin-assets/js/nice-select.js')}}"></script>
-    <script src="{{asset('admin-assets/js/wow.min.js')}}"></script>
-    <script src="{{asset('admin-assets/js/isotope-pkgd.js')}}"></script>
-    <script src="{{asset('admin-assets/js/imagesloaded-pkgd.js')}}"></script>
-    <script src="{{asset('admin-assets/js/ajax-form.js')}}"></script>
-    <script src="{{asset('admin-assets/js/jquery.appear.js')}}"></script>
-    <script src="{{asset('admin-assets/js/jquery.odometer.min.js')}}"></script>
-    <script src="{{asset('admin-assets/js/main.js')}}"></script>
+    <!--end::Scrolltop-->
+    <!--begin::Demo Panel-->
+    <!--end::Demo Panel-->
+    <script>
+    var HOST_URL = "https://preview.keenthemes.com/metronic/theme/html/tools/preview";
+    </script>
+    <!--begin::Global Config(global config for global JS scripts)-->
+    <script>
+    var KTAppSettings = {
+        "breakpoints": {
+            "sm": 576,
+            "md": 768,
+            "lg": 992,
+            "xl": 1200,
+            "xxl": 1400
+        },
+        "colors": {
+            "theme": {
+                "base": {
+                    "white": "#ffffff",
+                    "primary": "#3699FF",
+                    "secondary": "#E5EAEE",
+                    "success": "#1BC5BD",
+                    "info": "#8950FC",
+                    "warning": "#FFA800",
+                    "danger": "#F64E60",
+                    "light": "#E4E6EF",
+                    "dark": "#181C32"
+                },
+                "light": {
+                    "white": "#ffffff",
+                    "primary": "#E1F0FF",
+                    "secondary": "#EBEDF3",
+                    "success": "#C9F7F5",
+                    "info": "#EEE5FF",
+                    "warning": "#FFF4DE",
+                    "danger": "#FFE2E5",
+                    "light": "#F3F6F9",
+                    "dark": "#D6D6E0"
+                },
+                "inverse": {
+                    "white": "#ffffff",
+                    "primary": "#ffffff",
+                    "secondary": "#3F4254",
+                    "success": "#ffffff",
+                    "info": "#ffffff",
+                    "warning": "#ffffff",
+                    "danger": "#ffffff",
+                    "light": "#464E5F",
+                    "dark": "#ffffff"
+                }
+            },
+            "gray": {
+                "gray-100": "#F3F6F9",
+                "gray-200": "#EBEDF3",
+                "gray-300": "#E4E6EF",
+                "gray-400": "#D1D3E0",
+                "gray-500": "#B5B5C3",
+                "gray-600": "#7E8299",
+                "gray-700": "#5E6278",
+                "gray-800": "#3F4254",
+                "gray-900": "#181C32"
+            }
+        },
+        "font-family": "Poppins"
+    };
+    </script>
+    <!--end::Global Config-->
+    <!--begin::Global Theme Bundle(used by all pages)-->
+    <script src="{{asset('admin-assets/plugins/global/plugins.bundle.js')}}"></script>
+    <script src="{{asset('admin-assets/plugins/custom/prismjs/prismjs.bundle.js')}}"></script>
+    <script src="{{asset('admin-assets/js/scripts.bundle.js')}}"></script>
+    <!--end::Global Theme Bundle-->
+    <!--begin::Page Vendors(used by this page)-->
+    <script src="{{asset('admin-assets/plugins/custom/fullcalendar/fullcalendar.bundle.js')}}"></script>
+    <!--end::Page Vendors-->
+    <!--begin::Page Scripts(used by this page)-->
+    <script src="{{asset('admin-assets/js/pages/widgets.js')}}"></script>
+    <!--end::Page Scripts-->
+    @yield('my-scripts');
 </body>
-
-
-<!-- Mirrored from codeskdhaka.com/html/kindedo-prev/kindedo/about.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 04 May 2023 08:04:17 GMT -->
+<!--end::Body-->
 
 </html>
