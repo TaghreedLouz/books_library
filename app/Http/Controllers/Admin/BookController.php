@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 
 
 use App\Models\Book;
+use App\Models\Category;
 use Illuminate\Http\Request;
 use DB;
 
@@ -35,7 +36,11 @@ class BookController extends Controller
      */
     public function create()
     {
-        //
+        //ارسال بيانات لصفحة الفورم لعرضها للاختيار منها
+         $category = Category::all();
+         return view('admin.create-book', [
+         'category' => $category,
+         ]);
     }
 
     /**
