@@ -24,7 +24,7 @@ class BookController extends Controller
     {
 
         $books = Book::simplePaginate(20);
-        return view('admin.books.index', [
+        return view('admin.allbooks', [
             'books' => $books
         ]);
     }
@@ -37,10 +37,10 @@ class BookController extends Controller
     public function create()
     {
         //ارسال بيانات لصفحة الفورم لعرضها للاختيار منها
-         $category = Category::all();
-         return view('admin.create-book', [
-         'category' => $category,
-         ]);
+        $category = Category::all();
+        return view('admin.create-book', [
+            'category' => $category,
+        ]);
     }
 
     /**
@@ -51,7 +51,36 @@ class BookController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'name' => 'required|string',
+            'description' => 'required',
+            'category_id' => 'required|int|exists:categories,id',
+            'book_file' => 'nullable',
+            'book_img' => 'nullable|image',
+            'author' => 'required|string',
+            'date_publication' => 'required',
+            'price' => 'required|numeric',
+        ]);
+        $data = $request->all();
+        $data['user_id'] = 1;
+        if ($request->hasFile('book_img')) {
+            $file = $request->file('book_img');
+            $data['book_img'] =  $file->store('images', 'public');
+        }
+
+        if ($request->hasFile('book_file')) {
+            $file = $request->file('book_file');
+            $data['book_file'] =  $file->store('bookfile', 'public');
+        }
+
+        $book = Book::create($data);
+        //تخزين في جدول العلاقات
+        $book->users()->attach($request->user_id);
+
+        return redirect()->back()->with([
+            'message_flash' => 'تم إضافة الكتاب بنجاح ..',
+            'alter' => 'success'
+        ]);
     }
 
     /**
@@ -73,7 +102,11 @@ class BookController extends Controller
      */
     public function edit(Book $book)
     {
-        //
+        $categories = Category::all();
+        return view('admin.book-edit', [
+            'book' => $book,
+            'categories' => $categories,
+        ]);
     }
 
     /**
@@ -85,7 +118,36 @@ class BookController extends Controller
      */
     public function update(Request $request, Book $book)
     {
-        //
+        $request->validate([
+            'name' => 'required|string',
+            'description' => 'required',
+            'category_id' => 'required|int|exists:categories,id',
+            'book_file' => 'nullable',
+            'book_img' => 'nullable|image',
+            'author' => 'required|string',
+            'date_publication' => 'required',
+            'price' => 'required|numeric',
+        ]);
+        $data = $request->all();
+
+        if ($request->hasFile('book_img')) {
+            $file = $request->file('book_img');
+            $data['book_img'] =  $file->store('images', 'public');
+        }
+
+        if ($request->hasFile('book_file')) {
+            $file = $request->file('book_file');
+            $data['book_file'] =  $file->store('bookfile', 'public');
+        }
+
+        $book->update($data);
+        //تخزين في جدول العلاقات
+        $book->users()->attach($request->user_id);
+
+        return redirect()->back()->with([
+            'message_flash' => 'تم تعديل المنشور بنجاح ..',
+            'alter' => 'success'
+        ]);
     }
 
     /**
@@ -96,6 +158,10 @@ class BookController extends Controller
      */
     public function destroy(Book $book)
     {
-        //
+        $book->delete();
+        return redirect()->back()->with([
+            'message_flash' => 'تم حذف الكتاب بنجاح ..',
+            'alter' => 'success'
+        ]);
     }
 }
