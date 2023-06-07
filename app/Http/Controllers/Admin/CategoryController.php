@@ -11,10 +11,15 @@ class CategoryController extends Controller
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
-     */
+     */0-[pki ]
     public function index()
     {
-        //
+
+        $categories = Category::paginate(5);
+
+        return view('admin.categories.index', [
+            'categories' => $categories
+        ]);
     }
 
     /**
@@ -24,7 +29,11 @@ class CategoryController extends Controller
      */
     public function create()
     {
-        //
+        $categories = Category::all();
+
+        return view('admin.categories.create', [
+            'categories' => $categories,
+        ]);
     }
 
     /**
@@ -35,41 +44,18 @@ class CategoryController extends Controller
      */
     public function store(Request $request)
     {
-        //
-    }
+        $request->validate([
+            'name' => 'required|string|max:255',
+        ]);
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Category  $category
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Category $category)
-    {
-        //
-    }
+        $data = $request->all();
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Category  $category
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Category $category)
-    {
-        //
-    }
+        $category = Category::create($data);
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Category  $category
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, Category $category)
-    {
-        //
+        return redirect('/admin/categories')->with([
+            'message_flash' => 'تم إضافة المنشور بنجاح ..',
+            'alert' => 'success'
+        ]);
     }
 
     /**
@@ -80,6 +66,13 @@ class CategoryController extends Controller
      */
     public function destroy(Category $category)
     {
-        //
+        $category->delete();
+
+        return redirect()->back()->with([
+            'message_flash' => 'تم حذف المنشور بنجاح ..',
+            'alert' => 'success'
+        ]);
     }
+
+    // Other methods (show, edit, update) are empty and can be implemented as needed
 }

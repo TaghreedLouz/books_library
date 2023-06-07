@@ -18,6 +18,10 @@ Route::get('/', function () {
 });
 
 
+Route::get('/w', function () {
+    return view('w');
+});
+
 
 Route::get('/index', function () {
     return view('admin.index');
@@ -32,11 +36,13 @@ Route::get('/index/contact', function () {
 });
 Route::get('/admin/books/index', 'Admin\BookController@index');
 
+//عرض الفورم فقط
+Route::middleware(['auth','auth.admin'])->get('admin/create', 'Admin\BookController@create');
 
-    //عرض الفورم فقط
-    Route::get('admin/create', 'Admin\BookController@create');
-    //ارسال البيانات في الفورم من action
-    Route::post('posts/store', 'Admin\BookController@store')->name('admin.books.store');
+Route::get('admin/categories/index', 'Admin\CategoryController@index');
+
+//ارسال البيانات في الفورم من action
+Route::post('posts/store', 'Admin\BookController@store')->name('admin.books.store');
 
 
 Route::get('/dashboard', function () {

@@ -1,5 +1,5 @@
 @extends('admin.layouts.layout-customer')
-@section('title', 'Home')
+@section('title', 'Index')
 @section('content')
 
 </header>
