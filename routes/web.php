@@ -36,6 +36,20 @@ Route::get('/index/contact', function () {
 });
 Route::get('/admin/books/index', 'Admin\BookController@index');
 
+//عرض الكتب
+Route::get('/admin/allbooks', 'Admin\BookController@index');
+
+//عرض الفورم فقط
+Route::get('admin/create', 'Admin\BookController@create');
+//ارسال البيانات في الفورم من action
+Route::post('book/store', 'Admin\BookController@store')->name('admin.books.store');
+
+//
+Route::delete('admin/book/{book}', 'Admin\BookController@destroy')->name('admin.books.delete');
+//عرض صفحة تعديل الكتب
+Route::get('admin/book/edit/{book}', 'Admin\BookController@edit')->name('admin.books.edit');
+//تعديل البيانات
+Route::put('admin/book/update/{book}', 'Admin\BookController@update')->name('admin.books.update');
 //عرض الفورم فقط
 Route::middleware(['auth','auth.admin'])->get('admin/create', 'Admin\BookController@create');
 
