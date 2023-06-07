@@ -29,6 +29,26 @@ class BookController extends Controller
         ]);
     }
 
+    public function lastBooks()
+    {
+        $books = Book::simplePaginate(20);
+        return view('admin.last_books', [
+            'books' => $books
+        ]);
+    }
+
+
+  public function search(Request $request)
+    {
+        $query = $request->input('query'); // Get the search query from the request
+
+        // Perform your search logic here using the query, such as querying your model
+        $results = Book::where('name', 'like', '%' . $query . '%')->get();
+
+        return view('search-results', ['results' => $results, 'query' => $query]);
+    }
+
+
     /**
      * Show the form for creating a new resource.
      *
