@@ -30,7 +30,7 @@
     <link href="{{asset('admin-assets/css/themes/layout/brand/dark.rtl.css')}}" rel="stylesheet" type="text/css" />
     <link href="{{asset('admin-assets/css/themes/layout/aside/dark.css')}}" rel="stylesheet" type="text/css" />
     <!--end::Layout Themes-->
-    <link rel="shortcut icon" href="{{asset('admin-assets/media/logos/favicon.ico')}}" />
+    <link rel="shortcut icon" href="{{asset('admin-assets/img/logo/favicon.png')}}" />
     <style>
     body {
         font-family: 'Noto Kufi Arabic';
@@ -48,7 +48,7 @@
     <div id="kt_header_mobile" class="header-mobile align-items-center header-mobile-fixed">
         <!--begin::Logo-->
         <a href="index.html">
-            <img alt="Logo" src="{{asset('admin-assets/media/logos/logo-light.png')}}" />
+            <img alt="Logo" src="{{asset('admin-assets/img/logo/favicon.png')}}" />
         </a>
         <!--end::Logo-->
         <!--begin::Toolbar-->
@@ -209,51 +209,29 @@
                             <div class="dropdown">
                                 <!--begin::Toggle-->
                                 <div class="topbar-item" data-toggle="dropdown" data-offset="10px,0px">
-                                    <div class="topbar-item">
-                                        <div
-                                            class="btn btn-icon btn-icon-mobile w-auto btn-clean d-flex align-items-center btn-lg px-2">
-                                            <span
-                                                class="text-muted font-weight-bold font-size-base d-none d-md-inline mr-1">Hi,</span>
-                                            <span
-                                                class="text-dark-50 font-weight-bolder font-size-base d-none d-md-inline mr-3">Sean</span>
-                                            <span class="symbol symbol-lg-35 symbol-25 symbol-light-success">
-                                                <span class="symbol-label font-size-h5 font-weight-bold">S</span>
-                                            </span>
-                                        </div>
-                                    </div>
+
+
+                                <div              class="btn btn-icon btn-icon-mobile w-auto btn-clean d-flex align-items-center btn-lg px-2">
+
+
+                                 <span  class="text-dark-50 font-weight-bolder font-size-base d-none d-md-inline mr-3">hi</span>
+                              <span class="text-muted font-weight-bold font-size-base d-none d-md-inline mr-1">jj</span>
+
+                                                                            <span class="symbol symbol-lg-35 symbol-25 symbol-light-success">
+                                                                                      <form method="POST" action="{{ route('logout') }}">
+                                                                                         @csrf
+                                                                                          <x-dropdown-link :href="route('logout')"
+                                                                                          onclick="event.preventDefault();
+                                                                                          this.closest('form').submit();">
+                                                                                          {{ __('Log Out') }}
+                                                                                            </x-dropdown-link>
+                                                                                             </form>
+                                                                            </span>
+                                                                        </div>
+
                                 </div>
                                 <!--end::Toggle-->
-                                <!--begin::Dropdown-->
-                                <div
-                                    class="dropdown-menu p-0 m-0 dropdown-menu-anim-up dropdown-menu-sm dropdown-menu-right">
-                                    <!--begin::Nav-->
-                                    <ul class="navi navi-hover py-4">
-                                        <!--begin::Item-->
-                                        <li class="navi-item">
-                                            <a href="#" class="navi-link">
-                                                <span class="symbol symbol-20 mr-3">
-                                                    <img src="{{asset('admin-assets/media/svg/flags/226-united-states.svg')}}"
-                                                        alt="" />
-                                                </span>
-                                                <span class="navi-text">English</span>
-                                            </a>
-                                        </li>
-                                        <!--end::Item-->
-                                        <!--begin::Item-->
-                                        <li class="navi-item active">
-                                            <a href="#" class="navi-link">
-                                                <span class="symbol symbol-20 mr-3">
-                                                    <img src="{{asset('admin-assets/media/svg/flags/128-spain.svg')}}"
-                                                        alt="" />
-                                                </span>
-                                                <span class="navi-text">Spanish</span>
-                                            </a>
-                                        </li>
-                                        <!--end::Item-->
-                                    </ul>
-                                    <!--end::Nav-->
-                                </div>
-                                <!--end::Dropdown-->
+
                             </div>
                             <!--end::Languages-->
                         </div>

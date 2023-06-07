@@ -272,13 +272,19 @@
                                         <p><a href="tel:9072003462">907-200-3462</a></p>
                                     </div>
                                 </div>
-                                <div class="bd-header-btn d-none d-xl-block">
-                                    <a href="contact.html" class="bd-btn">
-                                        <span class="bd-btn-inner">
-                                            <span class="bd-btn-normal">Apply now</span>
-                                            <span class="bd-btn-hover">Apply now</span>
-                                        </span>
-                                    </a>
+                                <div class="bd-btn">
+                                @if(Auth::user())
+
+                                     <form method="POST" action="{{ route('logout') }}">
+                                       @csrf
+                                       <x-dropdown-link :href="route('logout')"
+                                        onclick="event.preventDefault();
+                                         this.closest('form').submit();"> {{ __('Log Out') }}  </x-dropdown-link>
+                                     </form>
+
+                                    @else
+                                    <a href="{{route('login')}}" class="bd-btn"> Login </a>
+                                    @endif
                                 </div>
                                 <div class="header-hamburger">
                                     <button type="button" class="hamburger-btn offcanvas-open-btn">

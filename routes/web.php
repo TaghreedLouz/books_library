@@ -18,6 +18,10 @@ Route::get('/', function () {
 });
 
 
+Route::get('/w', function () {
+    return view('w');
+});
+
 
 Route::get('/index', function () {
     return view('admin.index');
@@ -30,6 +34,7 @@ Route::get('/index/about', function () {
 Route::get('/index/contact', function () {
     return view('admin.contactus');
 });
+Route::get('/admin/books/index', 'Admin\BookController@index');
 
 //عرض الكتب
 Route::get('/admin/allbooks', 'Admin\BookController@index');
@@ -45,6 +50,13 @@ Route::delete('admin/book/{book}', 'Admin\BookController@destroy')->name('admin.
 Route::get('admin/book/edit/{book}', 'Admin\BookController@edit')->name('admin.books.edit');
 //تعديل البيانات
 Route::put('admin/book/update/{book}', 'Admin\BookController@update')->name('admin.books.update');
+//عرض الفورم فقط
+Route::middleware(['auth','auth.admin'])->get('admin/create', 'Admin\BookController@create');
+
+Route::get('admin/categories/index', 'Admin\CategoryController@index');
+
+//ارسال البيانات في الفورم من action
+Route::post('posts/store', 'Admin\BookController@store')->name('admin.books.store');
 
 
 Route::get('/dashboard', function () {
@@ -52,3 +64,4 @@ Route::get('/dashboard', function () {
 })->middleware(['auth'])->name('dashboard');
 
 require __DIR__ . '/auth.php';
+

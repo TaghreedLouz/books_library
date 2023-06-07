@@ -371,12 +371,12 @@
                                     <h4 class="bd-footer-widget-title mb-30">Quick links</h4>
                                     <div class="bd-footer-list">
                                         <ul>
-                                            <li><a href="#">About</a></li>
+                                            <li><a href="/index/about">About</a></li>
                                             <li><a href="#">Courses</a></li>
                                             <li><a href="#">Shop</a></li>
                                             <li><a href="#">Pages</a></li>
                                             <li><a href="#">Blog</a></li>
-                                            <li><a href="#">Contact</a></li>
+                                            <li><a href="/index/contact">Contact</a></li>
                                         </ul>
                                     </div>
                                 </div>
