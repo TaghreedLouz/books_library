@@ -54,4 +54,13 @@ class User extends Authenticatable
             'id'
         );
     }
+
+
+//        public function getRedirectRoute(){
+//        return match((int)$this->type){
+//        1 => route('admin.allbooks'),
+//        0 = > route(),
+//        };
+//        }
+
 }
