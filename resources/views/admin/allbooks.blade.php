@@ -81,7 +81,7 @@
                                                 <form method="post" action="{{route('admin.books.delete',[$books->id])}}">
                                                     @csrf
                                                     @method('DELETE')
-                                                    <button type="submit" onClick="return confirm('هل أنت متأكد نم حذف المنشور؟')" class="btn btn-icon btn-danger btn-circle mr-2">
+                                                    <button type="submit" onClick="return confirm('هل أنت متأكد من حذف الكتاب؟')" class="btn btn-icon btn-danger btn-circle mr-2">
                                                         <i class="flaticon flaticon-delete"></i>
                                                         <!--end::Svg Icon-->
                                                         </span>
