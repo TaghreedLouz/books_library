@@ -49,14 +49,7 @@
                      <h1 class="bd-hero-title wow fadeInUp" data-wow-duration="1s" data-wow-delay=".35s">
                         Best Product for Your Kids
                      </h1>
-                     <div class="bd-hero-btn wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">
-                        <a href="shop.html" class="bd-btn">
-                           <span class="bd-btn-inner">
-                              <span class="bd-btn-normal">Shop Latest Product</span>
-                              <span class="bd-btn-hover">Shop Latest Product</span>
-                           </span>
-                        </a>
-                     </div>
+
                   </div>
                </div>
                <div class="col-lg-6">

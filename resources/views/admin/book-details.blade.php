@@ -53,6 +53,7 @@
                     </div>
                 </div>
             </div>
+
             <div class="col-lg-6">
                 <div class="product-side-info mb-60">
                     <h2 class="">{{$book->name}}</h2>
@@ -63,26 +64,34 @@
                         {{$book->description}}
                     </p>
                     <div class="product-d-meta sku mb-10">
-                        <span>مؤلف الكتاب : </span>
+                        <span>Author : </span>
                         <span>{{$book->author}}</span>
                     </div>
                     <div class="product-d-meta ockcategories mb-10">
-                        <span>تاريخ إصدار الكتاب : </span>
+                        <span>Publication Date : </span>
                         <span>{{$book->date_publication}}</span>
                     </div>
                     <div class="product-d-meta tags mb-10">
-                        <span> تصنيف الكتاب :</span>
+                        <span>Book Category : </span>
                         <span>{{$book->category->name}}</span>
                     </div>
                     <br />
                     <br />
                     <br />
                     <br />
-                    <div class="product-quantity-cart mb-30">
-                        <a href="cart.html" class="bd-cart-btn"><i class="fas fa-shopping-basket"></i>شراء الكتاب</a>
-                    </div>
-                </div>
-            </div>
+
+               <div class="product-quantity-cart mb-30">
+                 <form action="{{route('index.books.buyBook')}}" method="post" enctype="multipart/form-data">
+                   @csrf
+                   @method('POST')
+                   <input type="hidden" name="book_id" value="{{ $book->id }}">
+
+                   <div class="bd-class-btn-3 theme-bg-2 text-center">
+                     <button href="cart.html" type="submit" class="bd-cart-btn" style="border-radius: 10px;"><i class="fas fa-shopping-basket"></i>Buy book</button>
+                   </div>
+                 </form>
+               </div>
+
         </div>
 
 
