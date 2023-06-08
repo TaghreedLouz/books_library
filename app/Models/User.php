@@ -56,11 +56,18 @@ class User extends Authenticatable
     }
 
 
-//        public function getRedirectRoute(){
-//        return match((int)$this->type){
-//        1 => route('admin.allbooks'),
-//        0 = > route(),
-//        };
-//        }
+    public function getRedirectRoute()
+    {
+        if ($this->type == '1')
+            return '/index';
+        else
+            return 'admin/allbooks';
 
+        //        return match((int)$this->type) {
+        //            1 => route('admin.posts.index'),
+        //            0 => '/',
+        //            // ...
+        //        };
+
+    }
 }

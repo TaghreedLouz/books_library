@@ -31,7 +31,7 @@ Route::get('/search', 'BookController@search')->name('search');
 
 Route::get('/index', function () {
     return view('admin.index');
-});
+})->name('index');
 
 Route::get('/index/about', function () {
     return view('admin.about');
@@ -45,7 +45,7 @@ Route::middleware(['auth', 'auth.admin'])->prefix('admin/')->as('admin.')->group
     function () {
 
         //عرض الكتب
-        Route::get('allbooks', 'Admin\BookController@index');
+        Route::get('allbooks', 'Admin\BookController@index')->name('allbooks');
         //عرض المستخدم والكتب التي اشتراها
         Route::get('customersBooks', 'Admin\BookController@customersBooks');
         //عرض الفورم فقط لانشاء كتاب
