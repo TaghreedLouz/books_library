@@ -43,14 +43,15 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    public function book(){
-                return $this->belongsToMany(
-                    Book::class,
-                    'post_tag',
-                    'user_id',
-                    'book_id',
-                    'id',
-                    'id'
-                );
-            }
+    public function books()
+    {
+        return $this->belongsToMany(
+            Book::class,
+            'user_books',
+            'user_id',
+            'book_id',
+            'id',
+            'id'
+        );
+    }
 }

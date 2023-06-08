@@ -8,6 +8,7 @@ use App\Http\Controllers\Controller;
 
 use App\Models\Book;
 use App\Models\Category;
+use App\Models\User;
 use Illuminate\Http\Request;
 use DB;
 
@@ -22,13 +23,20 @@ class BookController extends Controller
     /* return all data about books*/
     public function index()
     {
-
         $books = Book::simplePaginate(20);
         return view('admin.allbooks', [
             'books' => $books
         ]);
     }
+    public function customersBooks()  {
 
+        $user = User::all()->where('type','=','1');
+
+        return view('admin.customers-books',[
+            'user' => $user,
+        ]);
+
+    }
     /**
      * Show the form for creating a new resource.
      *

@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use PHPUnit\TextUI\XmlConfiguration\Group;
 
 /*
 |--------------------------------------------------------------------------
@@ -34,29 +35,28 @@ Route::get('/index/about', function () {
 Route::get('/index/contact', function () {
     return view('admin.contactus');
 });
-Route::get('/admin/books/index', 'Admin\BookController@index');
 
-//عرض الكتب
-Route::get('/admin/allbooks', 'Admin\BookController@index');
+Route::middleware(['auth', 'auth.admin'])->prefix('admin/')->as('admin.')->group(
+    function () {
 
-//عرض الفورم فقط
-Route::get('admin/create', 'Admin\BookController@create');
-//ارسال البيانات في الفورم من action
-Route::post('book/store', 'Admin\BookController@store')->name('admin.books.store');
+        //عرض الكتب
+        Route::get('allbooks', 'Admin\BookController@index');
+        //عرض المستخدم والكتب التي اشتراها
+        Route::get('customersBooks', 'Admin\BookController@customersBooks');
+        //عرض الفورم فقط لانشاء كتاب
+        Route::get('create', 'Admin\BookController@create');
+        //ارسال البيانات في الفورم من action ,تخزين الكتاب.
+        Route::post('book/store', 'Admin\BookController@store')->name('books.store');
+        //حذف الكتاب
+        Route::delete('book/{book}', 'Admin\BookController@destroy')->name('books.delete');
+        //عرض صفحة تعديل الكتب
+        Route::get('book/edit/{book}', 'Admin\BookController@edit')->name('books.edit');
+        //تعديل البيانات
+        Route::put('book/update/{book}', 'Admin\BookController@update')->name('books.update');
 
-//
-Route::delete('admin/book/{book}', 'Admin\BookController@destroy')->name('admin.books.delete');
-//عرض صفحة تعديل الكتب
-Route::get('admin/book/edit/{book}', 'Admin\BookController@edit')->name('admin.books.edit');
-//تعديل البيانات
-Route::put('admin/book/update/{book}', 'Admin\BookController@update')->name('admin.books.update');
-//عرض الفورم فقط
-Route::middleware(['auth','auth.admin'])->get('admin/create', 'Admin\BookController@create');
-
-Route::get('admin/categories/index', 'Admin\CategoryController@index');
-
-//ارسال البيانات في الفورم من action
-Route::post('posts/store', 'Admin\BookController@store')->name('admin.books.store');
+        Route::get('categories/index', 'Admin\CategoryController@index');
+    }
+);
 
 
 Route::get('/dashboard', function () {
@@ -64,4 +64,3 @@ Route::get('/dashboard', function () {
 })->middleware(['auth'])->name('dashboard');
 
 require __DIR__ . '/auth.php';
-
