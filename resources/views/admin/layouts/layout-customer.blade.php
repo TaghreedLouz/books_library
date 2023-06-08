@@ -273,14 +273,13 @@
                                     </div>
                                 </div>
                                 <div class="bd-btn">
-                                @if(Auth::user())
+                                    @if(Auth::user())
 
-                                     <form method="POST" action="{{ route('logout') }}">
-                                       @csrf
-                                       <x-dropdown-link :href="route('logout')"
-                                        onclick="event.preventDefault();
-                                         this.closest('form').submit();"> {{ __('Log Out') }}  </x-dropdown-link>
-                                     </form>
+                                    <form method="POST" action="{{ route('logout') }}">
+                                        @csrf
+                                        <x-dropdown-link :href="route('logout')" onclick="event.preventDefault();
+                                         this.closest('form').submit();"> {{ __('Log Out') }} </x-dropdown-link>
+                                    </form>
 
                                     @else
                                     <a href="{{route('login')}}" class="bd-btn"> Login </a>
@@ -523,9 +522,9 @@
                 <div class="col-12">
                     <div class="bd-search-popup">
                         <div class="bd-search-form">
-                            <form action="#">
+                            <form action="{{ route('index.allUserBooks.search') }}" method="get" novalidate="novalidate">
                                 <div class="bd-search-input">
-                                    <input type="search" placeholder="Type here to serach ...">
+                                    <input type="search" placeholder="Type here to serach ..." name="name" type="text" value="">
                                     <div class="bd-search-submit">
                                         <button type="submit"><i class="flaticon-search"></i></button>
                                     </div>

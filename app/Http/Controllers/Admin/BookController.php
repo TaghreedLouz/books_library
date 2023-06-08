@@ -30,93 +30,105 @@ class BookController extends Controller
             'books' => $books
         ]);
     }
-    public function customersBooks()  {
+    public function customersBooks()
+    {
 
-        $user = User::all()->where('type','=','1');
+        $user = User::all()->where('type', '=', '1');
 
-        return view('admin.customers-books',[
+        return view('admin.customers-books', [
             'user' => $user,
         ]);
-
     }
-    public function lastBooks()
+    
+    // public function lastBooks()
+    // {
+    //     $books = Book::simplePaginate(20);
+    //     return view('admin.last_books', [
+    //         'books' => $books
+    //     ]);
+    // }
+
+    public function indexCustomer()
     {
         $books = Book::simplePaginate(20);
-        return view('admin.last_books', [
+        return view('admin.index', [
             'books' => $books
         ]);
     }
 
-       public function allUserBooks()
-        {
-            $books = Book::simplePaginate(20);
-            return view('admin.all_user_books', [
-                'books' => $books
-            ]);
+    public function allUserBooks()
+    {
+
+        $name = request()->query('name', '');
+
+        $books = Book::when($name, function ($query, $name) {
+            return $query->where('name', 'LIKE', '%' . $name . '%');
+        })->orderBy('id', 'desc')->simplePaginate(20);
+
+        return view('admin.all_user_books', [
+            'name' => $name,
+            'books' => $books
+        ]);
+    }
+
+
+    public function buyBook(Request $request)
+    {
+        $user_id = Auth::id();
+        $user = User::findOrFail($user_id);
+
+        $book = Book::find($request->input('book_id'));
+
+
+        $price = $book->price;
+
+        // Check if the user has enough money
+        if ($user->budget < $price) {
+            return redirect('/');
         }
 
-
-          public function buyBook(Request $request){
-                                $user_id = Auth::id();
-                                $user = User::findOrFail($user_id);
-
-                                $book = Book::find($request->input('book_id'));
+        $lastPrice = $user->budget - $price;
 
 
-                                $price = $book->price;
-
-                                // Check if the user has enough money
-                                if ($user->budget < $price) {
-                                    return redirect('/');
-                                }
-
-                                $lastPrice = $user->budget - $price;
+        // Update the user's money
+        $user->budget = $lastPrice;
+        $user->save();
 
 
-                                // Update the user's money
-                                $user->budget = $lastPrice;
-                                $user->save();
+        $new = new User_Book();
+        $new->user_id = $user->id;
+        $new->book_id = $request->input('book_id');
+        $new->save();
+
+        $book->increment('Num_sold');
 
 
-                                    $new = new User_Book();
-                                    $new->user_id = $user->id;
-                                    $new->book_id = $request->input('book_id');
-                                    $new->save();
-
-                                $book->increment('Num_sold');
-
-
-                                return redirect()->back();
-
-                            }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  public function search(Request $request)
-    {
-        $query = $request->input('query'); // Get the search query from the request
-
-        // Perform your search logic here using the query, such as querying your model
-        $results = Book::where('name', 'like', '%' . $query . '%')->get();
-
-        return view('search-results', ['results' => $results, 'query' => $query]);
+        return redirect()->back();
     }
+
+    public function bookDetails(Book $book)
+    {
+        return view('admin.book-details', [
+            'book' => $book,
+        ]);
+    }
+
+
+
+    // public function search(Request $request)
+    // {
+
+    //     if ($request->search) {
+
+    //         $searchBook = Book::where('name', 'LIKE', '%' . $request->search . '%')->latest()->paginate(3);
+
+    //         return view('visitor.search', [
+    //             'books' => $searchBook,
+    //         ]);
+    //     } else {
+    //         redirect()->back()->with('success', 'No Result.');
+    //     }
+    // }
 
 
     /**

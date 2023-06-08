@@ -77,124 +77,144 @@
 
    <!-- product category area end here-->
 
-   <!-- product area start here-->
-   <section class="bd-product-area pt-120 pb-120 theme-bg-11">
-      <div class="container">
-         <div class="row align-items-end">
-            <div class="col-lg-8">
-               <div class="bd-section-title-wrapper text-center text-lg-start mb-55 wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".2s">
-                  <h2 class="bd-section-title mb-0">Latest Products</h2>
-                  <p>Set your kids up for success with these back-to-school must-haves. Perfect for preschoolers,
-                     kindergarteners, and those in first grade.</p>
+
+   <div style="padding: 10px 120px 10px 120px;">
+
+      <div class="bd-hero-btn wow fadeInUp" data-wow-duration="1s" data-wow-delay=".7s">
+         <a href="{{ route('index.allUserBooks.search') }}" class="bd-btn">
+            <span class="bd-btn-inner">
+               <span class="bd-btn-normal">Show All Books</span>
+               <span class="bd-btn-hover">Show All Books</span>
+            </span>
+         </a>
+      </div>
+
+      <br />
+      <br />
+
+      <!-- breadcrumb area end here  -->
+      <div class="row">
+         @php
+         $totalBooks = count($books);
+         @endphp
+         @foreach($books as $index => $book)
+         @if($index >= $totalBooks - 3)
+         <div class="col-xl-4 col-md-6">
+            <div class="bd-class-3 fix radius-24 p-relative mb-50 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
+               <div class="bd-class-thumb">
+                  <img src="{{asset('storage/'.$book->book_img)}}" alt="class image not found!">
                </div>
-            </div>
-            <div class="col-lg-4">
-               <div class="bd-product-filter-btn-wrapper d-flex justify-content-center justify-content-lg-end mb-55 wow fadeInRight" data-wow-duration="1s" data-wow-delay=".2s">
-                  <div class="bd-product-filter-btn bd-filter-btn">
-                     <button data-filter=".c-1" class="active">New Collection</button>
-                     <button data-filter=".c-2" class="">Trending</button>
-                     <button data-filter=".c-3" class="">Sale</button>
+               <div class="bd-class-content-3 theme-bg-6">
+                  <h3 class="bd-class-title-3"><a href="{{route('index.books.details',[$book->id])}}">{{$book->name}}</a></h3>
+                  <div class="bd-class-meta-wrapper d-flex justify-content-between align-items-center flex-wrap">
+                     <div class="bd-class-meta d-flex align-items-center flex-wrap">
+                        <span><a href="{{route('index.books.details',[$book->id])}}">{{$book->category->name}}</a></span>
+                     </div>
+                     <div class="bd-class-meta">
+                        <div class="bd-class-meta-price">
+                           <span>{{$book->price}}$</span>
+                        </div>
+                     </div>
                   </div>
                </div>
+               <div class="bd-class-btn-3 theme-bg-2 text-center">
+                  <a href="class-details.html">Buy Now</a>
+               </div>
             </div>
          </div>
-         <div class="row grid">
+         @endif
+         @endforeach
+      </div>
+   </div>
 
 
 
 
+   <!-- class area end here -->
 
-
-
-
-
-
-
-
-
-
-<div style="padding: 10px 120px 10px 120px;">
-
-    <!-- breadcrumb area end here  -->
-    <div class="row">
-        @php
-        $totalBooks = count($books);
-        @endphp
-        @foreach($books as $index => $book)
-        @if($index >= $totalBooks - 3)
-        <div class="col-xl-4 col-md-6">
-            <div class="bd-class-3 fix radius-24 p-relative mb-50 wow fadeInUp" data-wow-duration="1s"
-                data-wow-delay=".3s">
-                <div class="bd-class-thumb">
-                    <img src="{{asset('storage/'.$book->book_img)}}" alt="class image not found!">
-                </div>
-                <div class="bd-class-content-3 theme-bg-6">
-                    <h3 class="bd-class-title-3"><a href="class-details.html">{{$book->name}}</a></h3>
-                    <div class="bd-class-meta-wrapper d-flex justify-content-between align-items-center flex-wrap">
-                        <div class="bd-class-meta d-flex align-items-center flex-wrap">
-                            <span><a href="teacher-details.html">{{$book->category->name}}</a></span>
-                        </div>
-                        <div class="bd-class-meta">
-                            <div class="bd-class-meta-price">
-                                <span>{{$book->price}}$</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="bd-class-btn-3 theme-bg-2 text-center">
-                    <a href="class-details.html">Buy Now</a>
-                </div>
-            </div>
-        </div>
-        @endif
-        @endforeach
-    </div>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+   <!-- testimonial area start here  -->
+   <section class="bd-testimonial-area-2 pb-120 p-relative pt-120 theme-bg">
+      <div class="bd-testimonial-bottom-shape">
+         <img src="{{asset('admin-assets/img/shape/wave-section-break.png')}}" alt="img not found!">
+      </div>
+      <div class="container">
+         <div class="row justify-content-center">
+            <div class="col-lg-8">
+               <div class="bd-section-title-wrapper is-white z-index-1 p-relative text-center mb-55 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
+                  <h2 class="bd-section-title mb-0">Customers Says</h2>
+                  <p>With the help of teachers and the environment as the third teacher, students<br> have
+                     opportunities to confidently take risks.</p>
+               </div>
             </div>
          </div>
-
-
-
-
          <div class="row">
             <div class="col-12">
-               <div class="bd-product-more-btn mt-35 text-center wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
-                  <a href="/admin/allUserBooks" class="bd-btn">
-                     <span class="bd-btn-inner">
-                        <span class="bd-btn-normal">View More</span>
-                         <span class="bd-btn-hover">Show All Books</span>
-                     </span>
-                  </a>
+               <div class="bd-testimonial-active-2 swiper-container wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
+                  <div class="swiper-wrapper">
+                     <div class="swiper-slide">
+                        <div class="bd-testimonial-2 mr-5 theme-bg-6 mb-25">
+                           <div class="bd-testimonial-rating mb-30">
+                              <a href="#"><i class="fas fa-star"></i></a>
+                              <a href="#"><i class="fas fa-star"></i></a>
+                              <a href="#"><i class="fas fa-star"></i></a>
+                              <a href="#"><i class="fas fa-star"></i></a>
+                              <a href="#"><i class="fas fa-star"></i></a>
+                           </div>
+                           <div class="bd-testimonial-content-2 mb-35">
+                              <p>Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in
+                                 hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur,
+                                 ultrices mauris.</p>
+                           </div>
+                           <div class="bd-testimonial-avatar d-flex align-items-center">
+                              <div class="bd-testimonial-avatar-thumb">
+                                 <img src="{{asset('admin-assets/img/testimonials/1.png')}}" alt="testimonial avatar">
+                              </div>
+                              <h6 class="bd-testimonial-avatar-title-2 mb-0">Norma J. Johnston</h6>
+                              <div class="bd-testimonial-quote d-none d-sm-block clr-2">
+                                 <i class="flaticon-quote"></i>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="swiper-slide">
+                        <div class="bd-testimonial-2 mr-5 clr-3 theme-bg-7">
+                           <div class="bd-testimonial-rating mb-30">
+                              <a href="#"><i class="fas fa-star"></i></a>
+                              <a href="#"><i class="fas fa-star"></i></a>
+                              <a href="#"><i class="fas fa-star"></i></a>
+                              <a href="#"><i class="fas fa-star"></i></a>
+                              <a href="#"><i class="fas fa-star"></i></a>
+                           </div>
+                           <div class="bd-testimonial-content-2 mb-35">
+                              <p>Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in
+                                 hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula
+                                 consectetur,
+                                 ultrices mauris.</p>
+
+                           </div>
+                           <div class="bd-testimonial-avatar d-flex align-items-center">
+                              <div class="bd-testimonial-avatar-thumb">
+                                 <img src="{{asset('admin-assets/img/testimonials/2.png')}}" alt="testimonial avatar">
+                              </div>
+                              <h6 class="bd-testimonial-avatar-title-2 mb-0">Robert M. Allen</h6>
+                              <div class="bd-testimonial-quote d-none d-sm-block clr-1">
+                                 <i class="flaticon-quote"></i>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
                </div>
+               <!-- slider dots pagination -->
+               <div class="bd-testimonial-pagination-2 bd-dots-pagination justify-content-center wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s"></div>
             </div>
          </div>
       </div>
    </section>
-   <!-- product area end here-->
+   <!-- testimonial area end here  -->
+
+
+   <!-- promotion area end here  -->
 
    <!-- feedback area start here-->
    <section class="bd-feedback-area pb-60 pt-120">

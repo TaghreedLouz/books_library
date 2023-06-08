@@ -14,19 +14,20 @@ class Book extends Model
         'date_publication', 'price', 'Num_sold', 'category_id'
     ];
 
-       public function category()
-        {
-            return $this->belongsTo(Category::class, 'category_id', 'id');
-        }
+    public function category()
+    {
+        return $this->belongsTo(Category::class, 'category_id', 'id');
+    }
 
-       public function users(){
-                return $this->belongsToMany(
-                    User::class,
-                    'user_books',
-                    'book_id',
-                    'user_id',
-                    'id',
-                    'id'
-                );
-            }
+    public function users()
+    {
+        return $this->belongsToMany(
+            User::class,
+            'user_books',
+            'book_id',
+            'user_id',
+            'id',
+            'id'
+        );
+    }
 }

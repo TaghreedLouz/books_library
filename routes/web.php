@@ -20,23 +20,15 @@ Route::get('/', function () {
 
 
 Route::get('/w',  function () {
-                      return view('w');
-                  });
+    return view('w');
+});
 
-Route::get('/admin/lastBooks',  'Admin\BookController@lastBooks');
-Route::get('/admin/allUserBooks',  'Admin\BookController@allUserBooks');
+// Route::get('/admin/lastBooks',  'Admin\BookController@lastBooks');
+// Route::get('/search', 'BookController@search')->name('search');
 
 
 Route::post('/admin/allUserBooks/buyBook',  'Admin\BookController@buyBook')->name('book.purchased.buyBook');
 
-
-
-Route::get('/search', 'BookController@search')->name('search');
-
-
-Route::get('/index', function () {
-    return view('admin.index');
-})->name('index');
 
 Route::get('/index/about', function () {
     return view('admin.about');
@@ -45,6 +37,13 @@ Route::get('/index/about', function () {
 Route::get('/index/contact', function () {
     return view('admin.contactus');
 });
+
+//عرض صفحة الاندكس و احدث 3 كتب
+Route::get('/index', 'Admin\BookController@indexCustomer')->name('index');
+//عرض صفحة كل الكتب و البحث
+Route::get('/index/allUserBooks',  'Admin\BookController@allUserBooks')->name('index.allUserBooks.search');
+//عرض تفاصيل الكتاب
+Route::get('/index/bookDetails/{book}', 'Admin\BookController@bookDetails')->name('index.books.details');
 
 Route::middleware(['auth', 'auth.admin'])->prefix('admin/')->as('admin.')->group(
     function () {
