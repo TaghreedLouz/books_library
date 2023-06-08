@@ -24,6 +24,11 @@ Route::get('/w',  function () {
                   });
 
 Route::get('/admin/lastBooks',  'Admin\BookController@lastBooks');
+Route::get('/admin/allUserBooks',  'Admin\BookController@allUserBooks');
+
+
+Route::post('/admin/allUserBooks/buyBook',  'Admin\BookController@buyBook')->name('book.purchased.buyBook');
+
 
 
 Route::get('/search', 'BookController@search')->name('search');
