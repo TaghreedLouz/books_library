@@ -39,7 +39,7 @@ class BookController extends Controller
             'user' => $user,
         ]);
     }
-    
+
     // public function lastBooks()
     // {
     //     $books = Book::simplePaginate(20);
@@ -95,15 +95,20 @@ class BookController extends Controller
         $user->save();
 
 
-        $new = new User_Book();
-        $new->user_id = $user->id;
-        $new->book_id = $request->input('book_id');
-        $new->save();
+        $user->budget = $lastPrice;
+        $user->save();
+
+        $filePath = public_path('storage/' . $book->book_file);
+
 
         $book->increment('Num_sold');
 
 
-        return redirect()->back();
+        if (file_exists($filePath)) {
+            return response()->download($filePath);
+        } else {
+            return response()->json(['message' => 'الملف غير موجود.']);
+        }
     }
 
     public function bookDetails(Book $book)

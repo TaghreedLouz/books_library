@@ -27,7 +27,6 @@ Route::get('/w',  function () {
 // Route::get('/search', 'BookController@search')->name('search');
 
 
-Route::post('/admin/allUserBooks/buyBook',  'Admin\BookController@buyBook')->name('book.purchased.buyBook');
 
 
 Route::get('/index/about', function () {
@@ -44,6 +43,11 @@ Route::get('/index', 'Admin\BookController@indexCustomer')->name('index');
 Route::get('/index/allUserBooks',  'Admin\BookController@allUserBooks')->name('index.allUserBooks.search');
 //عرض تفاصيل الكتاب
 Route::get('/index/bookDetails/{book}', 'Admin\BookController@bookDetails')->name('index.books.details');
+
+
+// Route::post('/book/store', 'Admin\BookController@storeBook')->name('book.purchased.store');
+Route::middleware(['auth'])->post('/index/buyBook',  'Admin\BookController@buyBook')->name('index.books.buyBook');
+
 
 Route::middleware(['auth', 'auth.admin'])->prefix('admin/')->as('admin.')->group(
     function () {

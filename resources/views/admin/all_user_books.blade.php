@@ -69,26 +69,16 @@
                    </div>
                 </div>
 
-
-
-
-                @if(!App\Models\User_Book::where('user_id', Auth::id())->where('book_id',$book->id)->first())
-                <form action="{{route('book.purchased.buyBook')}}" method="post" enctype="multipart/form-data">
+                <form action="{{route('index.books.buyBook')}}" method="post" enctype="multipart/form-data">
                    @csrf
+                   @method('POST')
                    <input type="hidden" name="book_id" value="{{ $book->id }}">
 
                    <div class="bd-class-btn-3 theme-bg-2 text-center">
-                      <button type="submit" href="class-details.html">Buy Now</button>
-                      <button type="submit" src="{{ asset('storage/' . $book->book) }}">Buy</a>
+                      <button type="submit" href="">Buy Now</button>
                    </div>
 
                 </form>
-                @else
-                <a href="{{ asset('storage/' . $book->book) }}" alt="Pdf Book" class="img-fluid">The Book PDF</a>
-
-                @endif
-
-
 
 
              </div>

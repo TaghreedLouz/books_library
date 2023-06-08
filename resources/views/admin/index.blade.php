@@ -117,9 +117,20 @@
                      </div>
                   </div>
                </div>
-               <div class="bd-class-btn-3 theme-bg-2 text-center">
-                  <a href="class-details.html">Buy Now</a>
-               </div>
+
+
+               <form action="{{route('index.books.buyBook')}}" method="post" enctype="multipart/form-data">
+                  @csrf
+                  @method('POST')
+                  <input type="hidden" name="book_id" value="{{ $book->id }}">
+
+                  <div class="bd-class-btn-3 theme-bg-2 text-center">
+                     <button type="submit" href="">Buy Now</button>
+                  </div>
+
+               </form>
+
+
             </div>
          </div>
          @endif
