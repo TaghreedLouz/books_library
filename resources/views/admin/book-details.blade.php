@@ -79,23 +79,24 @@
                     <br />
                     <br />
                     <br />
+                    <div class="product-quantity-cart mb-30">
+                        <form action="{{route('index.books.buyBook')}}" method="post" enctype="multipart/form-data">
+                            @csrf
+                            @method('POST')
+                            <input type="hidden" name="book_id" value="{{ $book->id }}">
 
-               <div class="product-quantity-cart mb-30">
-                 <form action="{{route('index.books.buyBook')}}" method="post" enctype="multipart/form-data">
-                   @csrf
-                   @method('POST')
-                   <input type="hidden" name="book_id" value="{{ $book->id }}">
+                            <div class="bd-class-btn-3 theme-bg-2 text-center">
+                                <button href="cart.html" type="submit" class="bd-cart-btn" style="border-radius: 10px;"><i class="fas fa-shopping-basket"></i>Buy book</button>
+                            </div>
+                        </form>
+                    </div>
 
-                   <div class="bd-class-btn-3 theme-bg-2 text-center">
-                     <button href="cart.html" type="submit" class="bd-cart-btn" style="border-radius: 10px;"><i class="fas fa-shopping-basket"></i>Buy book</button>
-                   </div>
-                 </form>
-               </div>
+                </div>
+
+
+            </div>
 
         </div>
-
-
-    </div>
 </section>
 <!-- shop details area end  -->
 @endsection

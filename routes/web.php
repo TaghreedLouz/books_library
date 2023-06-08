@@ -70,7 +70,9 @@ Route::middleware(['auth', 'auth.admin'])->prefix('admin/')->as('admin.')->group
         Route::get('categories/index', 'Admin\CategoryController@index');
     }
 );
-
+Route::get('/index/error', function () {
+    return view('admin.error');
+});
 
 Route::get('/dashboard', function () {
     return view('dashboard');

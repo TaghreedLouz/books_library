@@ -79,34 +79,36 @@ class BookController extends Controller
 
         $book = Book::find($request->input('book_id'));
 
-
         $price = $book->price;
 
         // Check if the user has enough budget
         if ($user->budget < $price) {
-            return redirect('/');
+            return redirect("/index/error");
         }
 
         $lastPrice = $user->budget - $price;
-
 
         // Update the user's budget
         $user->budget = $lastPrice;
         $user->save();
 
 
-        $user->budget = $lastPrice;
-        $user->save();
-
         $filePath = public_path('storage/' . $book->book_file);
 
-        $new = new User_Book();
-        $new->user_id = $user->id;
-        $new->book_id = $request->input('book_id');
-        $new->save();
+        // Check if the user has already bought the book
+        $isBookPurchased = User_Book::where('user_id', $user->id)
+            ->where('book_id', $request->input('book_id'))
+            ->exists();
 
-        $book->increment('Num_sold');
 
+        if (!$isBookPurchased) {
+            $new = new User_Book();
+            $new->user_id = $user->id;
+            $new->book_id = $request->input('book_id');
+            $new->save();
+
+            $book->increment('Num_sold');
+        }
 
         if (file_exists($filePath)) {
             return response()->download($filePath);

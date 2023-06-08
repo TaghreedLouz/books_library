@@ -44,8 +44,7 @@
         <div class="row align-items-center">
             <div class="col-xl-6">
                 <div class="bd-section-title-wrapper mb-45">
-                    <h2 class="bd-section-title mb-0">OOPS! PAGE NOT
-                        FOUND!</h2>
+                    <h2 class="bd-section-title mb-0">OOPS! YOU DONT HAVE ENOUGH BUDGET!</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit
                         urna. Pellentesque sit amet sapien.</p>
                 </div>
