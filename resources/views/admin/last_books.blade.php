@@ -37,52 +37,61 @@
             <div class="bd-wave bd-wave-3"></div>
          </div>
 
-             <div class="bd-hero-btn wow fadeInUp" data-wow-duration="1s" data-wow-delay=".7s">
-                                    <a href="programs.html" class="bd-btn">
-                                       <span class="bd-btn-inner">
-                                          <span class="bd-btn-normal">Show All Books</span>
-                                          <span class="bd-btn-hover">Show All Books</span>
-                                       </span>
-                                    </a>
-                                 </div>
 
-                                 <br/>
-                                 <br/>
-                                 <br/>
+
+
       </section>
 
-      <!-- breadcrumb area end here  -->
-<div class="row">
-   @php
-      $totalBooks = count($books);
-   @endphp
-   @foreach($books as $index => $book)
-   @if($index >= $totalBooks - 3)
-   <div class="col-xl-4 col-md-6">
-      <div class="bd-class-3 fix radius-24 p-relative mb-50 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
-         <div class="bd-class-thumb">
-            <img src="{{asset('storage/'.$book->book_img)}}" alt="class image not found!">
-         </div>
-         <div class="bd-class-content-3 theme-bg-6">
-            <h3 class="bd-class-title-3"><a href="class-details.html">{{$book->name}}</a></h3>
-            <div class="bd-class-meta-wrapper d-flex justify-content-between align-items-center flex-wrap">
-               <div class="bd-class-meta d-flex align-items-center flex-wrap">
-                  <span><a href="teacher-details.html">{{$book->category->name}}</a></span>
-               </div>
-               <div class="bd-class-meta">
-                  <div class="bd-class-meta-price">
-                     <span>{{$book->price}}$</span>
-                  </div>
-               </div>
+<div style="padding: 10px 120px 10px 120px;">
+
+
+
+          <div class="bd-hero-btn wow fadeInUp" data-wow-duration="1s" data-wow-delay=".7s">
+                                          <a href="programs.html" class="bd-btn">
+                                             <span class="bd-btn-inner">
+                                                <span class="bd-btn-normal">Show All Books</span>
+                                                <span class="bd-btn-hover">Show All Books</span>
+                                             </span>
+                                          </a>
+                                       </div>
+
+                                       <br/>
+                                       <br/>
+
+    <!-- breadcrumb area end here  -->
+    <div class="row">
+        @php
+        $totalBooks = count($books);
+        @endphp
+        @foreach($books as $index => $book)
+        @if($index >= $totalBooks - 3)
+        <div class="col-xl-4 col-md-6">
+            <div class="bd-class-3 fix radius-24 p-relative mb-50 wow fadeInUp" data-wow-duration="1s"
+                data-wow-delay=".3s">
+                <div class="bd-class-thumb">
+                    <img src="{{asset('storage/'.$book->book_img)}}" alt="class image not found!">
+                </div>
+                <div class="bd-class-content-3 theme-bg-6">
+                    <h3 class="bd-class-title-3"><a href="class-details.html">{{$book->name}}</a></h3>
+                    <div class="bd-class-meta-wrapper d-flex justify-content-between align-items-center flex-wrap">
+                        <div class="bd-class-meta d-flex align-items-center flex-wrap">
+                            <span><a href="teacher-details.html">{{$book->category->name}}</a></span>
+                        </div>
+                        <div class="bd-class-meta">
+                            <div class="bd-class-meta-price">
+                                <span>{{$book->price}}$</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bd-class-btn-3 theme-bg-2 text-center">
+                    <a href="class-details.html">Buy Now</a>
+                </div>
             </div>
-         </div>
-         <div class="bd-class-btn-3 theme-bg-2 text-center">
-            <a href="class-details.html">Buy Now</a>
-         </div>
-      </div>
-   </div>
-   @endif
-   @endforeach
+        </div>
+        @endif
+        @endforeach
+    </div>
 </div>
 
 

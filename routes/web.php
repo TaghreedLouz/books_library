@@ -18,9 +18,14 @@ Route::get('/', function () {
 });
 
 
-Route::get('/w', function () {
-    return view('w');
-});
+Route::get('/w',  function () {
+                      return view('w');
+                  });
+
+Route::get('/admin/lastBooks',  'Admin\BookController@lastBooks');
+
+
+Route::get('/search', 'BookController@search')->name('search');
 
 
 Route::get('/index', function () {
