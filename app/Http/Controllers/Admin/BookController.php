@@ -9,7 +9,9 @@ use App\Http\Controllers\Controller;
 use App\Models\Book;
 use App\Models\Category;
 use App\Models\User;
+use App\Models\User_Book;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use DB;
 
 class BookController extends Controller
@@ -44,6 +46,66 @@ class BookController extends Controller
             'books' => $books
         ]);
     }
+
+       public function allUserBooks()
+        {
+            $books = Book::simplePaginate(20);
+            return view('admin.all_user_books', [
+                'books' => $books
+            ]);
+        }
+
+
+          public function buyBook(Request $request){
+                                $user_id = Auth::id();
+                                $user = User::findOrFail($user_id);
+
+                                $book = Book::find($request->input('book_id'));
+
+
+                                $price = $book->price;
+
+                                // Check if the user has enough money
+                                if ($user->budget < $price) {
+                                    return redirect('/');
+                                }
+
+                                $lastPrice = $user->budget - $price;
+
+
+                                // Update the user's money
+                                $user->budget = $lastPrice;
+                                $user->save();
+
+
+                                    $new = new User_Book();
+                                    $new->user_id = $user->id;
+                                    $new->book_id = $request->input('book_id');
+                                    $new->save();
+
+                                $book->increment('Num_sold');
+
+
+                                return redirect()->back();
+
+                            }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
   public function search(Request $request)
