@@ -273,16 +273,13 @@
                                     </div>
                                 </div>
                                 <div class="bd-btn">
-                                    @if(Auth::user())
-
+                                    @if(auth()->check())
                                     <form method="POST" action="{{ route('logout') }}">
                                         @csrf
-                                        <x-dropdown-link :href="route('logout')" onclick="event.preventDefault();
-                                         this.closest('form').submit();"> {{ __('Log Out') }} </x-dropdown-link>
+                                        <button type="submit" class="bd-btn">{{ __('Log Out') }}</button>
                                     </form>
-
                                     @else
-                                    <a href="{{route('login')}}" class="bd-btn"> Login </a>
+                                    <a href="{{ route('login') }}" class="bd-btn">{{ __('Login') }}</a>
                                     @endif
                                 </div>
                                 <div class="header-hamburger">

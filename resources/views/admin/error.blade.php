@@ -20,10 +20,10 @@
                 <div class="col-xl-10">
                     <div class="bd-breadcrumb d-flex align-items-center justify-content-center">
                         <div class="bd-breadcrumb-content text-center">
-                            <h1 class="bd-breadcrumb-title">404 page</h1>
+                            <h1 class="bd-breadcrumb-title">OOPS!</h1>
                             <div class="bd-breadcrumb-list">
                                 <span><a href="index.html"><i class="flaticon-hut"></i>Kindedo</a></span>
-                                <span>404 page</span>
+                                <span>OOPS!</span>
                             </div>
                         </div>
                     </div>
