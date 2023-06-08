@@ -82,7 +82,7 @@ class BookController extends Controller
 
         $price = $book->price;
 
-        // Check if the user has enough money
+        // Check if the user has enough budget
         if ($user->budget < $price) {
             return redirect('/');
         }
@@ -90,7 +90,7 @@ class BookController extends Controller
         $lastPrice = $user->budget - $price;
 
 
-        // Update the user's money
+        // Update the user's budget
         $user->budget = $lastPrice;
         $user->save();
 
@@ -100,6 +100,10 @@ class BookController extends Controller
 
         $filePath = public_path('storage/' . $book->book_file);
 
+        $new = new User_Book();
+        $new->user_id = $user->id;
+        $new->book_id = $request->input('book_id');
+        $new->save();
 
         $book->increment('Num_sold');
 

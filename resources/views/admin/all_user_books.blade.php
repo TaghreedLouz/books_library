@@ -85,6 +85,22 @@
           </div>
           @endforeach
           @endif
+          <div class="row">
+             <div class="col-12">
+                <div class="bd-pagination pt-20 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
+                   <ul class="justify-content-center">
+                      {{ $books->links() }}
+
+                   </ul>
+                </div>
+             </div>
+
+          </div>
+
+          <br />
+          <br />
+          <br />
+          <br />
 
        </div>
     </div>
