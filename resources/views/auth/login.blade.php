@@ -77,6 +77,7 @@
                     <span class="ml-2 text-sm text-gray-600">{{ __('Remember me') }}</span>
                 </label>
 
+ <br/>
             <br>
 
                                 @if (Route::has('register'))
